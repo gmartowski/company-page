@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
-import { Router, Route, Switch } from 'react-router';
+import { Link } from 'react-router-dom';
+import './navbar.less';
 
 export class Navbar extends Component {
     render() {
         return (
-            <Router history={}>
-                <Route />
-                <Route />
-                <Route />
-                <Route />
-            </Router>
+            <nav className="navbar">
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/portfolio">Portfolio</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                </ul>
+            </nav>
         );
     }
 }

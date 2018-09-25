@@ -4,10 +4,19 @@ import './particles.less';
 
 const particlesProps = {
     className: 'particles',
-    width: '100%',
-    height: '100%',
     canvasClassName: 'particles__canvas',
     params: {
+        particles: {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            }
+        },
+        height: '500px',
+        width: '100%',
         color: '#ffffff'
     }
 };
