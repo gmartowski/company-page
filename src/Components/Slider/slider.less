@@ -1,0 +1,28 @@
+@import "~slick-carousel/slick/slick.css";
+
+.wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+
+    & > div {
+        background: #eee;
+        padding: 1em;
+        border: 1px solid #ccc;
+    }
+
+    & > div:nth-child(odd) {
+        background: #ddd;
+    }
+
+    .nested {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        grid-gap: 1em;
+        grid-column: 2/4;
+        & > div {
+            border: 1px solid black;
+        }
+    }
+}

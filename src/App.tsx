@@ -9,7 +9,7 @@ import { Portfolio } from './Pages/Portfolio';
 import About from './Pages/About';
 import { Contact } from './Pages/Contact';
 
-export class App extends Component {
+class App extends Component {
     render() {
         return (
             <Router>
@@ -26,3 +26,5 @@ export class App extends Component {
         );
     }
 }
+
+export default App;
