@@ -20,17 +20,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|tsx)$/,
                 exclude: /node_modules/,
                 use: [
                     { loader: "babel-loader" },
                     { loader: "eslint-loader" },
                 ]
-            },
-            {
-                test: /.tsx?$/,
-                loader: 'awesome-typescript-loader',
-                exclude: /node_modules/,
             },
             {
                 test: /\.html$/,
