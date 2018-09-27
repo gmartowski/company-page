@@ -1,5 +1,19 @@
 @import (reference) "./../../variables";
+
 .header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: minmax(140px, auto);
+    align-items: center;
     color: @metal;
     background-color: @snowflake;
+
+    &__logo {
+        font-size: 20px;
+    }
+
+    &__navbar {
+        display: grid;
+        justify-self: end;
+    }
 }

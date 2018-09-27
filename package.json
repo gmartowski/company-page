@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "archiver": "^3.0.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^9.0.0",

@@ -5,16 +5,42 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
     width: 100%;
     min-height: 100px;
     color: @snowflake;
     transition-duration: 500ms;
     transition-delay: 200ms;
 
+    &__back {
+        opacity: 0;
+    }
+
+    &__front {
+        opacity: 1;
+    }
+
+    &__content {
+        border-top: 1px solid @snowflake;
+        padding-top: 10px;
+    }
+
+    &__title {
+        padding-bottom: 10px;
+    }
+
     &:hover {
         transform: rotateY(180deg);
         transition-delay: 200ms;
         transition-duration: 500ms;
+
+        &__back {
+            opacity: 1;
+        }
+
+        &__front {
+            opacity: 0;
+        }
     }
 
     &.orange {

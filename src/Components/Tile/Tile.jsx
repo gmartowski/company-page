@@ -13,8 +13,15 @@ export class Tile extends Component {
         });
         return (
             <div className={`tile ${tileClasses}`}>
-                <div className="tile__title">{companyName}</div>
-                <div className="tile__content">{technologicalStack}</div>
+
+                <div className="tile__front">
+                    <div className="tile__title">{companyName}</div>
+                    <div className="tile__content">{technologicalStack}</div>
+                </div>
+
+                <div className="tile__back">
+                    <i className="fas fa-search"></i>
+                </div>
             </div>
         );
     }

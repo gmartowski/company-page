@@ -1,20 +1,16 @@
-/* Model pudełkowy*/
-
-html {
+html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
-html, body {
-    height: 100%;
-}
-
 #app {
-
-
     .home {
-        display: block;
+        display: flex;
+        flex-direction: column;
 
         &__tiles-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: minmax(300px, auto);
         }
     }
 }

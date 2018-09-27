@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './app.less';
 import { Header } from './Components/Header/Header';
 import { Footer } from './Components/Footer/Footer';
-import { Navbar } from './Components/Navbar/Navbar';
-import Home from './Pages/Home';
-import { Portfolio } from './Pages/Portfolio';
-import About from './Pages/About';
-import { Contact } from './Pages/Contact';
+import Home from './Pages/Home/Home';
+import { Portfolio } from './Pages/Portfolio/Portfolio';
+import About from './Pages/About/About';
+import { Contact } from './Pages/Contact/Contact';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 class App extends Component {
     render() {
@@ -15,7 +15,6 @@ class App extends Component {
             <Router>
                 <Fragment>
                     <Header />
-                    <Navbar />
                     <Route exact component={Home} path="/" />
                     <Route component={Portfolio} path="/portfolio" />
                     <Route component={About} path="/about" />
