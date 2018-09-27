@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ParticlesWrapper } from '../Components/Particles/Particles';
 import { Tile } from '../Components/Tile/Tile';
+import HomeSlider from '../Components/Slider/Slider';
 
 class Home extends Component {
     render() {
@@ -14,6 +15,7 @@ class Home extends Component {
                     <Tile backgroundColor="green" companyName="Avra" fontColor="white" technologicalStack="JS, LESS, jQuery"/>
                     <Tile backgroundColor="orange" companyName="The Green Line" fontColor="white" technologicalStack="JS, LESS, jQuery"/>
                 </div>
+                <HomeSlider />
             </div>
         );
     }

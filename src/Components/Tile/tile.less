@@ -8,6 +8,14 @@
     width: 100%;
     min-height: 100px;
     color: @snowflake;
+    transition-duration: 500ms;
+    transition-delay: 200ms;
+
+    &:hover {
+        transform: rotateY(180deg);
+        transition-delay: 200ms;
+        transition-duration: 500ms;
+    }
 
     &.orange {
         background-color: @holland;
