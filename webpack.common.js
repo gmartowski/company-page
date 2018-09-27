@@ -7,7 +7,7 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 const SRC_DIR = path.resolve(__dirname, 'src');
 
 module.exports = {
-    entry: SRC_DIR + '/index.js',
+    entry: SRC_DIR + '/index.tsx',
     output: {
         filename: 'bundle.js',
         path: DIST_DIR
@@ -26,6 +26,11 @@ module.exports = {
                     { loader: "babel-loader" },
                     { loader: "eslint-loader" },
                 ]
+            },
+            {
+                test: /.tsx?$/,
+                loader: 'awesome-typescript-loader',
+                exclude: /node_modules/,
             },
             {
                 test: /\.html$/,
@@ -89,7 +94,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx']
+        extensions: ['.ts', '.tsx', '.js', '.json']
     },
     plugins: [
         new WriteFilePlugin(),

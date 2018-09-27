@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import * as React  from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.less';
 
-export class Navbar extends Component {
+export class Navbar extends React.Component {
     render() {
         return (
             <nav className="navbar">

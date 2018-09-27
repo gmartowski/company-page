@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { ParticlesWrapper } from '../../Components/Particles/Particles';
 import { Tile } from '../../Components/Tile/Tile';
-import HomeSlider from '../../Components/Slider/Slider';
 import './home.less';
 
 class Home extends Component {

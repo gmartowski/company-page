@@ -17,8 +17,15 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "@fortawesome/fontawesome-free": "^5.3.1",
+    "@types/enzyme": "^3.1.14",
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-router": "^4.0.31",
+    "@types/react-router-dom": "^4.3.1",
     "archiver": "^3.0.0",
-    "babel-core": "^6.26.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
@@ -39,6 +46,7 @@
     "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "^4.3.1",
     "jest": "^23.6.0",
+    "jest-enzyme": "^6.1.2",
     "jest-loader": "^0.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
@@ -51,9 +59,11 @@
     "react-hot-loader": "^4.3.11",
     "react-router": "^4.3.1",
     "react-test-renderer": "^16.5.2",
+    "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.0",
+    "typescript": "^3.0.3",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.18.0",
+    "webpack": "^4.20.2",
     "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
@@ -74,11 +84,26 @@
     "coverage": "jest --coverage"
   },
   "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/tests/test-preprocessor.js"
+    },
+    "testMatch": [
+      "**/?(*.)+(spec|test).ts?(x)"
+    ],
     "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/tests/__mocks__/styleMock.js",
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/tests/__mocks__/fileMock.js"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup.js"
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "setupFiles": [
+      "<rootDir>/tests/test-shim.js",
+      "<rootDir>/tests/test-setup.js"
+    ]
   },
   "dependencies": {
     "axios": "0.18.0",
