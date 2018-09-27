@@ -1,22 +1,34 @@
 import React, { Component } from 'react';
 import './footer.less';
 
-export class Footer extends Component {
+interface FooterProps {
+    name: string;
+    ceo: string;
+    street: string;
+    flat: string;
+    postal: string;
+    city: string;
+    phone: string;
+    email: string;
+}
+
+export class Footer extends Component<FooterProps, {}> {
 
     render() {
+        const {name, ceo, street, flat, postal, city, phone, email} = this.props;
         return (
             <footer className="footer">
 
                 <div className="footer__info">
-                    <div>StabSoft</div>
-                    <div>Grzegorz Martowski</div>
-                    <div>Kokosowa 1/16</div>
-                    <div>54-060 Wrocław</div>
+                    <div className="footer__name">{name}</div>
+                    <div className="footer__ceo">{ceo}</div>
+                    <div className="footer__street">{street} {flat}</div>
+                    <div className="footer__postal-and-city">{postal} {city}</div>
                 </div>
 
                 <div className="footer__contact">
-                    <div>693-881-676</div>
-                    <div><a href="mailto:kontakt@stabsoft.pl">kontakt@stabsoft.pl</a></div>
+                    <div className="footer__phone">{phone}</div>
+                    <div className="footer__email"><a href={`mailto:${email}`}>{email}</a></div>
                 </div>
 
                 <div className="footer__social">
