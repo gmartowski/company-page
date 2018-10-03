@@ -8,35 +8,30 @@ import { Portfolio } from '../Pages/Portfolio/Portfolio';
 import { Contact } from '../Pages/Contact/Contact';
 import Home from '../Pages/Home/Home';
 import About from '../Pages/About/About';
+import { Provider, AppContext } from "./Provider";
 
 class App extends Component {
 
-    state = {
-        company: {
-            name: 'StabSoft',
-            ceo: 'Grzegorz Martowski',
-            street: 'Kokosowa',
-            flat: '1/16',
-            postal: '54-060',
-            city: 'Wrocław',
-            phone: '693-881-676',
-            email: 'kontakt@stabsoft.pl'
-        }
-    };
-
     render() {
-        const {company} = this.state;
         return (
-            <Router>
-                <div className={'hello'}>
-                    <Header />
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/portfolio" component={Portfolio} />
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/contact" component={Contact} />
-                    <Footer {...company} />
-                </div>
-            </Router>
+            <Provider>
+                <Router>
+                    <div className={'hello'}>
+                        <Header />
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/portfolio" component={Portfolio} />
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/contact" component={Contact} />
+                        <AppContext.Consumer>
+                            {
+                                (context) => (
+                                    <Footer {...context} />
+                                )
+                            }
+                        </AppContext.Consumer>
+                    </div>
+                </Router>
+            </Provider>
         );
     }
 }

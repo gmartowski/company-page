@@ -10,7 +10,11 @@ module.exports = {
     entry: SRC_DIR + '/index.tsx',
     output: {
         filename: 'bundle.js',
-        path: DIST_DIR
+        path: DIST_DIR,
+        publicPath: '/'
+    },
+    devServer: {
+        historyApiFallback: true
     },
     optimization: {
         splitChunks: {
