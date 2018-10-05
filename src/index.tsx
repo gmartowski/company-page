@@ -3,21 +3,7 @@ import * as ReactDOM from 'react-dom';
 import App from './App/App';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
-import common_pl from './translations/pl/commons.json';
-import common_en from './translations/en/commons.json';
-
-i18next.init({
-    interpolation: {escapeValue: false},
-    lng: 'pl',
-    resources: {
-        en: {
-            common: common_en
-        },
-        pl: {
-            common: common_pl
-        },
-    },
-});
+import './translation.config';
 
 const element = document.getElementById('app');
 
