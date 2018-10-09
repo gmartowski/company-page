@@ -1,27 +1,19 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+// Stateless component, jsx spread attributes, destructuring arguments, conditional rendering
 
+import React from 'react';
 
-export class ContainerComponent extends Component {
-
-    state = {
-        persons: [],
-        results: []
-    };
-
-    componentDidMount() {
-
-        axios.get('https://randomuser.me/api/?results=10')
-            .then(response => {
-                console.log(response);
-                this.setState({results: response.data.results});
-            });
-    }
-
-
-    render() {
-        return <div>
-            {Object.keys(this.state.results).map(item => <div key={item}>{this.state.results[item].name.first}</div>)}
-        </div>;
-    }
+interface StatelessFunctionInterface {
+    id: string,
+    classType: object
 }
+
+const StatelessFunction: React.SFC<StatelessFunctionInterface> = ({classType, id, children}) => {
+    return (
+        id === 'test-id' ?
+        <div {...{className: `${classType.className}`, id, children}} /> :
+        <div>{id}</div>
+
+    );
+};
+
+export default StatelessFunction;
