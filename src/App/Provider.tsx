@@ -12,7 +12,8 @@ export class Provider extends Component {
             postal: '54-060',
             city: 'Wrocław',
             phone: '693-881-676',
-            email: 'kontakt@stabsoft.pl'
+            email: 'kontakt@stabsoft.pl',
+            skype: 'grzegorz.martowski'
         }
     };
 

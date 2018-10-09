@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import './input.less';
 import classNames from 'classnames';
 
 export class Input extends Component {
@@ -12,15 +13,18 @@ export class Input extends Component {
     };
 
     render() {
+        const {name, labelText, value, onChangeHandler} = this.props;
         return (
-            <input type="text"
-                   className={classNames({'input': true})}
-                   value={this.props.value}
-                   placeholder='dasdasdasdsad'
-                   id={this.props.name}
-                   name={this.props.name}
-                   onChange={this.onChangeHandler}
-            />
+            <Fragment>
+                <label for={name} className="input-label">{labelText}</label>
+                <input type="text"
+                       className={classNames({'input': true})}
+                       value={value}
+                       id={name}
+                       name={name}
+                       onChange={onChangeHandler}
+                />
+            </Fragment>
         );
     }
 }
