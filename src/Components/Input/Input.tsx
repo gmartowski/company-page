@@ -19,9 +19,9 @@ export class Input extends Component<InputProps, InputState> {
         value: ''
     };
 
-    onChangeHandler = event => this.props.onChangeHandler(event);
+    private onChangeHandler = (event: React.FormEvent<HTMLInputElement>) => this.props.onChangeHandler(event);
 
-    render() {
+    public render() {
         const {name, labelText, value, onChangeHandler} = this.props;
         return (
             <Fragment>

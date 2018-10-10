@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './app.less';
-import 'spectre.css';
 import Header from "../Components/Header/Header";
 import { Footer } from "../Components/Footer/Footer";
 import { Portfolio } from '../Pages/Portfolio/Portfolio';
