@@ -9,20 +9,12 @@ interface InputProps {
     onChangeHandler: void
 }
 
-interface InputState {
-    value: string
-}
-
-export class Input extends Component<InputProps, InputState> {
-
-    private state: InputState = {
-        value: ''
-    };
+export class Input extends Component<InputProps> {
 
     private onChangeHandler = (event: React.FormEvent<HTMLInputElement>) => this.props.onChangeHandler(event);
 
     public render() {
-        const {name, labelText, value, onChangeHandler} = this.props;
+        const {name, labelText, value} = this.props;
         return (
             <Fragment>
                 <label for={name} className="input-label">{labelText}</label>
@@ -31,7 +23,7 @@ export class Input extends Component<InputProps, InputState> {
                        value={value}
                        id={name}
                        name={name}
-                       onChange={onChangeHandler}
+                       onChange={this.onChangeHandler}
                 />
             </Fragment>
         );
