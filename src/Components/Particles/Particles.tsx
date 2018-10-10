@@ -11,13 +11,13 @@ const particlesProps = {
                 "value": 80,
                 "density": {
                     "enable": true,
-                    "value_area": 800
+                    "value_area": 1000
                 }
             }
         },
-        height: '500px',
+        height: '75vh',
         width: '100%',
-        color: '#ffffff'
+        color: '#fff'
     }
 };
 

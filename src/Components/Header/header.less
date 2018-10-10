@@ -2,7 +2,7 @@
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: minmax(140px, auto);
     align-items: center;
     color: @metal;
@@ -15,5 +15,10 @@
     &__navbar {
         display: grid;
         justify-self: end;
+    }
+
+    &__locale {
+        display: flex;
+        justify-content: center;
     }
 }

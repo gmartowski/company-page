@@ -4,9 +4,9 @@ import { Navbar } from "../Navbar/Navbar";
 import './header.less';
 
 export class Header extends Component {
-    onChangeLanguage = ({target}) => {
-        i18next.changeLanguage(target.value);
-    };
+
+    onChangeLanguage = ({target: {value}}) => i18next.changeLanguage(value);
+
     render() {
         return (
             <header className="header">
@@ -14,7 +14,7 @@ export class Header extends Component {
                 <div className="header__navbar">
                     <Navbar />
                 </div>
-                <div className="header__lang">
+                <div className="header__locale">
                     <button className="btn" onClick={this.onChangeLanguage} value="pl">PL</button>
                     <button className="btn" onClick={this.onChangeLanguage} value="en">EN</button>
                 </div>
