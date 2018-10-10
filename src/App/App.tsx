@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './app.less';
 import 'spectre.css';
-import { Header } from "../Components/Header/Header";
+import Header from "../Components/Header/Header";
 import { Footer } from "../Components/Footer/Footer";
 import { Portfolio } from '../Pages/Portfolio/Portfolio';
 import Contact from '../Pages/Contact/Contact';

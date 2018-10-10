@@ -2,15 +2,26 @@ import React, { Component, Fragment } from 'react';
 import './input.less';
 import classNames from 'classnames';
 
-export class Input extends Component {
+interface InputProps {
+    name: string,
+    labelText: string,
+    value: string,
+    onChangeHandler: void
+}
 
-    state = {
+interface InputState {
+    value: string
+}
+
+export class Input extends Component<InputProps, InputState> {
+
+    state: InputState = {
         value: ''
     };
 
-    onChangeHandler = (event) => {
-        this.props.onChangeHandler(event);
-    };
+    private name = 'dsandasd';
+
+    onChangeHandler = event => this.props.onChangeHandler(event);
 
     render() {
         const {name, labelText, value, onChangeHandler} = this.props;

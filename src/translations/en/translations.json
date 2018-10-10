@@ -1,6 +1,17 @@
 {
-  "welcome": {
-    "title": "This is my title",
-    "intro": "this is intro for my webpage"
+  "header": {
+    "nameAndSurname": "Grzegorz Martowski",
+    "langPl": "PL",
+    "langEn": "EN"
+  },
+  "navbar": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Responsive Web Apps",
+    "intro": "Designer"
   }
 }

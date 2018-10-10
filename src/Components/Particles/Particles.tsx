@@ -25,7 +25,15 @@ export class ParticlesWrapper extends Component {
 
     render() {
         return (
-            <Particles {...particlesProps} />
+            <div>
+                <h1 style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    color: '#fff'
+                }}>Front-end </h1>
+                <Particles {...particlesProps} />
+            </div>
         );
     }
 }

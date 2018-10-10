@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import i18next from 'i18next';
-import { Navbar } from "../Navbar/Navbar";
+import { translate } from 'react-i18next';
+import Navbar from "../Navbar/Navbar";
 import './header.less';
 
-export class Header extends Component {
+@translate('common')
+class Header extends Component {
 
     onChangeLanguage = ({target: {value}}) => i18next.changeLanguage(value);
 
     render() {
+        const {t} = this.props;
         return (
             <header className="header">
-                <div className="header__logo">Grzegorz Martowski</div>
+                <div className="header__logo">{t('header.nameAndSurname')}</div>
                 <div className="header__navbar">
                     <Navbar />
                 </div>
                 <div className="header__locale">
-                    <button className="btn" onClick={this.onChangeLanguage} value="pl">PL</button>
-                    <button className="btn" onClick={this.onChangeLanguage} value="en">EN</button>
+                    <button className="btn" onClick={this.onChangeLanguage} value="pl">{t('header.langPl')}</button>
+                    <button className="btn" onClick={this.onChangeLanguage} value="en">{t('header.langEn')}</button>
                 </div>
             </header>
         );
     }
 }
+
+export default Header;
