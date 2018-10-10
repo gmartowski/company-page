@@ -15,11 +15,9 @@ interface InputState {
 
 export class Input extends Component<InputProps, InputState> {
 
-    state: InputState = {
+    private state: InputState = {
         value: ''
     };
-
-    private name = 'dsandasd';
 
     onChangeHandler = event => this.props.onChangeHandler(event);
 
