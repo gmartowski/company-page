@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { translate } from "react-i18next";
 import { Image } from "../../Components/Image/Image";
 import { AppContext, Provider } from "../../App/Provider";
+import { Portal } from '../../Components/Portal/Portal';
+import { Modal } from '../../Components/Modal/Modal';
 
 @translate("common")
 export class About extends Component {
@@ -20,6 +22,9 @@ export class About extends Component {
                                        title={context.ceo}
                                 />
                                 {t("about.content")}
+                                <Portal>
+                                    <Modal />
+                                </Portal>
                             </div>
                         )
                     }
