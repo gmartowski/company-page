@@ -1,26 +1,35 @@
-import React, { Component } from "react";
-import { translate } from "react-i18next";
+import { AppContext, Provider } from "../../App/Provider";
 import { Input } from "../../Components/Input/Input";
-import { Provider, AppContext } from "../../App/Provider";
-import Textarea from "../../Components/Input/Textarea";
-import Select from "../../Components/Input/Select";
+import React, { Component } from "react";
+import { Select } from "../../Components/Input/Select";
+import { Textarea } from "../../Components/Input/Textarea";
+import { translate } from "react-i18next";
 import "./contact.less";
 
+interface IContactState {
+    email: string;
+    name: string;
+    message: string;
+    profession: string;
+}
+
+interface IContactProps {
+    t: void;
+}
+
 @translate("common")
-class Contact extends Component {
+export class Contact extends Component<IContactProps, IContactState> {
 
-    state = {
+    private state = {
         email: "",
-        name: "",
         message: "",
-        profession: ""
+        name: "",
+        profession: "",
     };
 
-    onChangeHandler = ({target: {name, value}}) => {
-        this.setState({[name]: value});
-    };
+    private onChangeHandler = ({target: {name, value}}) => this.setState({[name]: value});
 
-    render() {
+    public render() {
         const {t} = this.props;
         const {name, email} = this.state;
         const options = [{id: 1, name: "engineer"}, {id: 2, name: "professor"}, {id: 3, name: "project manager"}];
@@ -70,5 +79,3 @@ class Contact extends Component {
         );
     }
 }
-
-export default Contact;

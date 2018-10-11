@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from 'react';
-import './input.less';
-import classNames from 'classnames';
+import classNames from "classnames";
+import React, { Component, Fragment } from "react";
+import "./input.less";
 
 interface InputProps {
-    name: string,
-    labelText: string,
-    value: string,
-    onChangeHandler: void
+    labelText: string;
+    name: string;
+    onChangeHandler: void;
+    value: string;
 }
 
 export class Input extends Component<InputProps> {
@@ -17,9 +17,9 @@ export class Input extends Component<InputProps> {
         const {name, labelText, value} = this.props;
         return (
             <Fragment>
-                <label for={name} className="input-label">{labelText}</label>
+                <label htmlFor={name} className="input-label">{labelText}</label>
                 <input type="text"
-                       className={classNames({'input': true})}
+                       className={classNames({input: true})}
                        value={value}
                        id={name}
                        name={name}

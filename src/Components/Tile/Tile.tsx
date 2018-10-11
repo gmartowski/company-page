@@ -1,16 +1,25 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import './tile.less';
+import React, { Component } from "react";
+import classNames from "classnames";
+import "./tile.less";
 
-export class Tile extends Component {
-    render() {
-        const { backgroundColor, fontColor, companyName, technologicalStack } = this.props;
+interface ITileProps {
+    backgroundColor: string;
+    fontColor: string;
+    companyName: string;
+    technologicalStack: string;
+}
+
+export class Tile extends Component<ITileProps> {
+
+    public render() {
+
+        const {backgroundColor, fontColor, companyName, technologicalStack} = this.props;
         const tileClasses = classNames({
-            'orange': this.props.backgroundColor === 'orange',
-            'blue': this.props.backgroundColor === 'blue',
-            'green': this.props.backgroundColor === 'green',
+            blue: backgroundColor === "blue",
+            green: backgroundColor === "green",
+            orange: backgroundColor === "orange",
         });
+
         return (
             <div className={`tile ${tileClasses}`}>
 
@@ -26,10 +35,3 @@ export class Tile extends Component {
         );
     }
 }
-
-Tile.propTypes = {
-    backgroundColor: PropTypes.string.isRequired,
-    fontColor: PropTypes.string.isRequired,
-    companyName: PropTypes.string.isRequired,
-    technologicalStack: PropTypes.string.isRequired
-};

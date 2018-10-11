@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import './input.less';
+import React, { Component } from "react";
+import "./input.less";
 
-class Textarea extends Component {
+export class Textarea extends Component {
 
-    onChangeHandler = (event) => {
-        this.props.onChangeHandler(event);
-    };
+    private onChangeHandler = (event: React.FormEvent<HTMLInputElement>) => this.props.onChangeHandler(event);
 
-    render() {
+    public render() {
         return (
-            <textarea onChange={this.onChangeHandler} name="message" className="textarea">{this.props.value}</textarea>
+            <textarea onChange={this.onChangeHandler}
+                      name="message"
+                      className="textarea"
+                      defaultValue={this.props.value}>
+            </textarea>
         );
     }
 }
-
-export default Textarea;

@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
-import './input.less';
+import React, { Component } from "react";
+import "./input.less";
 
-class Select extends Component {
+interface ISelectProps {
+    name: string;
+    value: string;
+    children: object;
+}
 
-    onChangeHandler = (event) => {
-        this.props.onChangeHandler(event);
-    };
+export class Select extends Component<ISelectProps, {}> {
 
-    render() {
+    private onChangeHandler = (event) => this.props.onChangeHandler(event);
+
+    public render() {
         const {name, value, children} = this.props;
         return (
             <select className="select"
@@ -27,5 +31,3 @@ class Select extends Component {
         );
     }
 }
-
-export default Select;

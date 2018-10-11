@@ -4,6 +4,9 @@
     "max-line-length": {
       "options": [120]
     },
+    "member-ordering": false,
+    "trailing-comma": false,
+    "ordered-imports": false,
     "new-parens": true,
     "no-arg": true,
     "no-bitwise": true,

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './footer.less';
+import React, { Component } from "react";
+import "./footer.less";
 
-interface FooterProps {
+interface IFooterProps {
     name: string;
     ceo: string;
     street: string;
@@ -12,10 +12,12 @@ interface FooterProps {
     email: string;
 }
 
-export class Footer extends Component<FooterProps, {}> {
+export class Footer extends Component<IFooterProps, {}> {
 
-    render() {
+    public render() {
+
         const {name, ceo, street, flat, postal, city, phone, email} = this.props;
+
         return (
             <footer className="footer">
 

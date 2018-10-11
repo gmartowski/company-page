@@ -1,18 +1,18 @@
-import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image } from "../../../Components/Image/Image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { Component } from "react";
 import "./portfolioItem.less";
 
-interface PortfolioItemProps {
-    logoUrl: string,
-    logoAlt: string,
-    logoTitle: string,
-    profession: string,
-    period: string,
-    responsibilities: Array<string>
+interface IPortfolioItemProps {
+    logoUrl: string;
+    logoAlt: string;
+    logoTitle: string;
+    profession: string;
+    period: string;
+    responsibilities: Array<string>;
 }
 
-export class PortfolioItem extends Component<PortfolioItemProps> {
+export class PortfolioItem extends Component<IPortfolioItemProps> {
 
     public render() {
 
@@ -22,7 +22,7 @@ export class PortfolioItem extends Component<PortfolioItemProps> {
             logoTitle,
             profession,
             period,
-            responsibilities
+            responsibilities,
         } = this.props;
 
         return (

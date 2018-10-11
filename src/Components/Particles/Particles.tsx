@@ -1,37 +1,32 @@
-import React, { Component } from 'react';
-import Particles from 'react-particles-js';
-import './particles.less';
+import React, { Component } from "react";
+import Particles from "react-particles-js";
+import "./particles.less";
 
 const particlesProps = {
-    className: 'particles',
-    canvasClassName: 'particles__canvas',
+    canvasClassName: "particles__canvas",
+    className: "particles",
     params: {
+        color: "#fff",
+        height: "75vh",
         particles: {
-            "number": {
-                "value": 80,
-                "density": {
-                    "enable": true,
-                    "value_area": 1000
-                }
+            number: {
+                density: {
+                    enable: true,
+                    value_area: 1000
+                },
+                value: 80
             }
         },
-        height: '75vh',
-        width: '100%',
-        color: '#fff'
+        width: "100%"
     }
 };
 
 export class ParticlesWrapper extends Component {
 
-    render() {
+    public render() {
         return (
             <div>
-                <h1 style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    color: '#fff'
-                }}>Front-end </h1>
+                <h1 style={{position: "absolute", top: "50%", left: "50%", color: "#fff"}}>Front-end </h1>
                 <Particles {...particlesProps} />
             </div>
         );

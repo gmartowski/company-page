@@ -1,23 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { About } from "../Pages/About/About";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import Header from "../Components/Header/Header";
+import { Contact } from "../Pages/Contact/Contact";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { Footer } from "../Components/Footer/Footer";
-import { Portfolio } from '../Pages/Portfolio/Portfolio';
-import Contact from '../Pages/Contact/Contact';
-import { Home } from '../Pages/Home/Home';
-import { About } from '../Pages/About/About';
-import { Provider, AppContext } from "./Provider";
-import './app.less';
+import { Header } from "../Components/Header/Header";
+import { Home } from "../Pages/Home/Home";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { AppContext, Provider } from "./Provider";
+import { Portfolio } from "../Pages/Portfolio/Portfolio";
+import "./app.less";
+
+library.add(faCheck);
 
 export class App extends Component {
 
-    render() {
+    public render() {
         return (
             <Provider>
                 <Router>
-                    <div className={'hello'}>
+                    <div className={"hello"}>
                         <Header />
                         <Route exact path="/" component={Home} />
                         <Route exact path="/portfolio" component={Portfolio} />
@@ -36,5 +38,3 @@ export class App extends Component {
         );
     }
 }
-
-library.add(faCheck);

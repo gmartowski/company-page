@@ -1,23 +1,28 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export const AppContext = React.createContext();
 
-export class Provider extends Component {
-    state = {
+interface IProviderState {
+    company: object;
+}
+
+export class Provider extends Component<IProviderState> {
+
+    private state = {
         company: {
-            name: 'StabSoft',
-            ceo: 'Grzegorz Martowski',
-            street: 'Kokosowa',
-            flat: '1/16',
-            postal: '54-060',
-            city: 'Wrocław',
-            phone: '693-881-676',
-            email: 'kontakt@stabsoft.pl',
-            skype: 'grzegorz.martowski'
+            ceo: "Grzegorz Martowski",
+            city: "Wrocław",
+            email: "kontakt@stabsoft.pl",
+            flat: "1/16",
+            name: "StabSoft",
+            phone: "693-881-676",
+            postal: "54-060",
+            skype: "grzegorz.martowski",
+            street: "Kokosowa"
         }
     };
 
-    render() {
+    public render() {
         return (
             <AppContext.Provider value={this.state.company}>
                 {this.props.children}

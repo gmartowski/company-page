@@ -1,31 +1,32 @@
-import * as React from 'react';
-import { translate } from 'react-i18next';
-import { Link } from 'react-router-dom';
-import './navbar.less';
+import React, { Component } from "react";
+import { translate } from "react-i18next";
+import { Link } from "react-router-dom";
+import "./navbar.less";
 
-@translate('common')
-class Navbar extends React.Component {
-    render() {
+@translate("common")
+export class Navbar extends Component {
+
+    public render() {
+
         const {t} = this.props;
+
         return (
             <nav className="navbar">
                 <ul>
                     <li>
-                        <Link to="/">{t('navbar.home')}</Link>
+                        <Link to="/">{t("navbar.home")}</Link>
                     </li>
                     <li>
-                        <Link to="/portfolio">{t('navbar.portfolio')}</Link>
+                        <Link to="/portfolio">{t("navbar.portfolio")}</Link>
                     </li>
                     <li>
-                        <Link to="/about">{t('navbar.about')}</Link>
+                        <Link to="/about">{t("navbar.about")}</Link>
                     </li>
                     <li>
-                        <Link to="/contact">{t('navbar.contact')}</Link>
+                        <Link to="/contact">{t("navbar.contact")}</Link>
                     </li>
                 </ul>
             </nav>
         );
     }
 }
-
-export default Navbar;

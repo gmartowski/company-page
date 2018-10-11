@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import './portfolio.less';
+import React, { Component } from "react";
+import "./portfolio.less";
 import { PortfolioItem } from "./PortfolioItem/PortfolioItem";
 import { portfolioItems } from "../../portfolio-items.json";
 
 export class Portfolio extends Component {
-    render() {
+
+    public render() {
+
         return (
             <div className="portfolio">
                 {
