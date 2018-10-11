@@ -18,7 +18,8 @@ export class Provider extends Component<IProviderState> {
             phone: "693-881-676",
             postal: "54-060",
             skype: "grzegorz.martowski",
-            street: "Kokosowa"
+            street: "Kokosowa",
+            avatar: "http://stabsoft.pl/public/images/ja.jpg",
         }
     };
 
