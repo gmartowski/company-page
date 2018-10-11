@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import './portfolio.less';
+import { PortfolioItem } from "./PortfolioItem/PortfolioItem";
+import { portfolioItems } from "../../portfolio-items.json";
 
 export class Portfolio extends Component {
     render() {
         return (
             <div className="portfolio">
-                <h1>Portfolio</h1>
-                <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </div>
+                {
+                    Object.keys(portfolioItems).map((item) => (
+                        <PortfolioItem logoUrl={portfolioItems[item].logoUrl}
+                                       logoAlt={portfolioItems[item].logoAlt}
+                                       logoTitle={portfolioItems[item].logoTitle}
+                                       profession={portfolioItems[item].profession}
+                                       period={portfolioItems[item].period}
+                                       responsibilities={portfolioItems[item].responsibilities}
+                                       key={item}
+                        />
+                    ))
+                }
             </div>
         );
     }

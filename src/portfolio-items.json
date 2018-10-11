@@ -1,0 +1,90 @@
+{
+  "portfolioItems": {
+    "avra": {
+      "profession": "Front-end Developer",
+      "logoUrl": "http://stabsoft.pl/public/images/brands/avra.png",
+      "logoAlt": "Avra",
+      "logoTitle": "Avra",
+      "period": "PAŹDZIERNIK 2014 - TERAZ",
+      "responsibilities": [
+        "Utrzymanie i implementacja Front-Endu projektów,",
+        "Implementacja CSS / LESS w produktach opartych o język Java i technologię JSP,",
+        "Praca przy projektach wykorzystujących technologie i narzędzia takie jak: GIT, LESS, Gulp czy AngularJS."
+      ]
+    },
+    "makrologic": {
+      "profession": "Web Developer",
+      "logoUrl": "http://stabsoft.pl/public/images/brands/makrologic.png",
+      "logoAlt": "Makrologic",
+      "logoTitle": "Makrologic",
+      "period": "PAŹDZIERNIK 2014 - TERAZ",
+      "responsibilities": [
+        "Utrzymanie i implementacja Front-Endu projektów,",
+        "Implementacja CSS / LESS w produktach opartych o język Java i technologię JSP,",
+        "Praca przy projektach wykorzystujących technologie i narzędzia takie jak: GIT, LESS, Gulp czy AngularJS."
+      ]
+    },
+    "stabsoft": {
+      "profession": "Freelancer",
+      "logoUrl": "http://stabsoft.pl/public/images/brands/stabsoft.png",
+      "logoAlt": "Stabsoft",
+      "logoTitle": "Stabsoft",
+      "period": "CZERWIEC 2014 - TERAZ",
+      "responsibilities": [
+        "Projektowanie stron WWW opartych o CMS Wordpress,",
+        "Cięcie PSD, współpraca z grafikiem,",
+        "Wykorzystanie najnowszych technologii webowych (Laravel, Bootstrap/Foundation, SASS/LESS, jQuery/AngularJS)."
+      ]
+    },
+    "greenline": {
+      "profession": "Junior Web Developer",
+      "logoUrl": "http://stabsoft.pl/public/images/brands/greenline.png",
+      "logoAlt": "The Green Line",
+      "logoTitle": "The Green LIne",
+      "period": "MAJ 2014 - GRUDZIEŃ 2014",
+      "responsibilities": [
+        "Aktualizacja i rozwijanie Front-Endu stron firmy",
+        "Programowanie zmian w logice biznesowej platformy opartej o framework Zend,",
+        "Projektowanie nowych witryn firmy przy współpracy z grafikiem."
+      ]
+    },
+    "funmedia": {
+      "profession": "Junior Web Developer",
+      "logoUrl": "http://stabsoft.pl/public/images/brands/funmedia.png",
+      "logoAlt": "",
+      "logoTitle": "",
+      "period": "PAŹDZIERNIK 2013 - MAJ 2014",
+      "responsibilities": [
+        "Aktualizacja i rozwijanie frontendu kursów e-learningowych,",
+        "Programowanie zmian w logice biznesowej platformy opartej o framework Zend,",
+        "Realizacja prac związanych z data miningiem na bazach danych MySQL,"
+      ]
+    },
+    "creditsuisse": {
+      "profession": "Junior Web Developer/Publisher",
+      "logoUrl": "http://stabsoft.pl/public/images/brands/creditsuisse.png",
+      "logoAlt": "Credit Suisse",
+      "logoTitle": "Credit Suisse",
+      "period": "SIERPIEŃ 2012 - MARZEC 2013",
+      "responsibilities": [
+        "Wykonywanie zadań z zakresu publishingu; aktualizacja i rozwijanie stron firmy,",
+        "Programowanie formularzy internetowych, rejestrujących klientów banku,",
+        "Udział w migracji stron do nowego systemu zarządzania treścią,",
+        "Praca w zespole wielokulturowym,",
+        "Zdobyte umiejętności na stanowisku: Rozwinięcie znajomości biblioteki jQuery oraz systemu CMS, kontakt i współpraca z klientami zagranicznym."
+      ]
+    },
+    "surfland": {
+      "profession": "Service Worker ",
+      "logoUrl": "http://stabsoft.pl/public/images/brands/surfland.png",
+      "logoAlt": "Surfland",
+      "logoTitle": "Surfland",
+      "period": "MARZEC 2010 - KWIECIEŃ 2010",
+      "responsibilities": [
+        "Serwis komputerowy,",
+        "Konfiguracja i rekonfiguracja sprzętu komputerowego,",
+        "Pomoc w pracach wewnętrznych w firmie"
+      ]
+    }
+  }
+}

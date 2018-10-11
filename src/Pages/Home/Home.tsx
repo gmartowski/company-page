@@ -3,7 +3,7 @@ import { ParticlesWrapper } from '../../Components/Particles/Particles';
 import { Tile } from '../../Components/Tile/Tile';
 import './home.less';
 
-class Home extends Component {
+export class Home extends Component {
     render() {
         return (
             <div className="home">
@@ -18,5 +18,3 @@ class Home extends Component {
         );
     }
 }
-
-export default Home;

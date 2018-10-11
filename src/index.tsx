@@ -1,6 +1,6 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App/App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { App } from './App/App';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import './translation.config';

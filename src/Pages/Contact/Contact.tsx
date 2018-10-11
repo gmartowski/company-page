@@ -1,23 +1,19 @@
-import React, { Component } from 'react';
-import { translate } from 'react-i18next';
+import React, { Component } from "react";
+import { translate } from "react-i18next";
 import { Input } from "../../Components/Input/Input";
 import { Provider, AppContext } from "../../App/Provider";
 import Textarea from "../../Components/Input/Textarea";
 import Select from "../../Components/Input/Select";
-import './contact.less';
+import "./contact.less";
 
-interface ContactInterface {
-
-}
-
-@translate('common')
+@translate("common")
 class Contact extends Component {
 
     state = {
-        email: '',
-        name: '',
-        message: '',
-        profession: ''
+        email: "",
+        name: "",
+        message: "",
+        profession: ""
     };
 
     onChangeHandler = ({target: {name, value}}) => {
@@ -27,7 +23,7 @@ class Contact extends Component {
     render() {
         const {t} = this.props;
         const {name, email} = this.state;
-        const options = [{id: 1, name: 'engineer'}, {id: 2, name: 'professor'}, {id: 3, name: 'project manager'}];
+        const options = [{id: 1, name: "engineer"}, {id: 2, name: "professor"}, {id: 3, name: "project manager"}];
         return (
             <Provider>
                 <AppContext.Consumer>
@@ -60,7 +56,8 @@ class Contact extends Component {
                                     </div>
 
                                     <div className="contact_form-select">
-                                        <Select name="profession" onChangeHandler={this.onChangeHandler} value={this.state.profession}>
+                                        <Select name="profession" onChangeHandler={this.onChangeHandler}
+                                                value={this.state.profession}>
                                             {options}
                                         </Select>
                                     </div>

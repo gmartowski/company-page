@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import './app.less';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import Header from "../Components/Header/Header";
 import { Footer } from "../Components/Footer/Footer";
 import { Portfolio } from '../Pages/Portfolio/Portfolio';
 import Contact from '../Pages/Contact/Contact';
-import Home from '../Pages/Home/Home';
-import About from '../Pages/About/About';
+import { Home } from '../Pages/Home/Home';
+import { About } from '../Pages/About/About';
 import { Provider, AppContext } from "./Provider";
+import './app.less';
 
-class App extends Component {
+export class App extends Component {
 
     render() {
         return (
@@ -36,4 +37,4 @@ class App extends Component {
     }
 }
 
-export default App;
+library.add(faCheck);
