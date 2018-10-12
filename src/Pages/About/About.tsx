@@ -4,13 +4,23 @@ import { Image } from "../../Components/Image/Image";
 import { AppContext, Provider } from "../../App/Provider";
 import { Portal } from '../../Components/Portal/Portal';
 import { Modal } from '../../Components/Modal/Modal';
+import { Button } from '../../Components/Button/Button';
 
 @translate("common")
 export class About extends Component {
 
+    private state = {
+        isModalOpened: false
+    };
+
+    private toggleModalHandler = () => {
+        this.setState({isModalOpened: !this.state.isModalOpened});
+    };
+
     public render() {
 
         const {t} = this.props;
+
         return (
             <Provider>
                 <AppContext.Consumer>
@@ -22,8 +32,12 @@ export class About extends Component {
                                        title={context.ceo}
                                 />
                                 {t("about.content")}
+                                <Button type="positive" onClickHandler={this.toggleModalHandler}>Otwórz modal</Button>
                                 <Portal>
-                                    <Modal />
+                                    <Modal title="Tytuł modala" isModalOpened={this.state.isModalOpened}
+                                           onCloseHandler={this.toggleModalHandler}>
+                                        Kontent modala
+                                    </Modal>
                                 </Portal>
                             </div>
                         )

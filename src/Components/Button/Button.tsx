@@ -5,6 +5,7 @@ import './button.less';
 interface IButtonProps {
     children: string;
     type: string;
+    onClickHandler: void;
 }
 
 export class Button extends Component<IButtonProps> {
