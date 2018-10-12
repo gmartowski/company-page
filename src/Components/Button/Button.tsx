@@ -2,23 +2,28 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import './button.less';
 
-export class Button extends Component {
+interface IButtonProps {
+    children: string;
+    type: string;
+}
 
-    state = {
-        buttonValue: ''
-    };
+export class Button extends Component<IButtonProps> {
 
-    onClickHandler = (event) => {
-        this.props.onClickHandler(event);
-    };
+    private onClickHandler = (event) => this.props.onClickHandler(event);
 
-    render() {
+    public render() {
+        const {children, type} = this.props;
         return (
             <button
-                className={classNames({'btn': true})}
-                onClick={this.onClickHandler}
-                value={this.state.buttonValue}>
-                {this.props.children}
+                className={
+                    classNames({
+                        'button': true,
+                        'button--positive': type === 'positive',
+                        'button--negative': type === 'negative',
+                        'button--neutral': type === 'neutral'
+                    })}
+                onClick={this.onClickHandler}>
+                {children}
             </button>
         );
     }
