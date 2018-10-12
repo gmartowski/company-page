@@ -36,7 +36,12 @@ export class About extends Component {
                                 <Portal>
                                     <Modal title="Tytuł modala" isModalOpened={this.state.isModalOpened}
                                            onCloseHandler={this.toggleModalHandler}>
-                                        Kontent modala
+                                        Strona niepublicznej szkoły wyższej Collegium Civitas
+                                        Projekt graficzny: Fabryka Aplikacji
+                                        CMS: Wordpress
+                                        Preprocesor CSS: Less
+                                        Pierwszy projekt obsługujący kilka wersji językowych
+                                        URL: http://www.civitas.edu.pl/
                                     </Modal>
                                 </Portal>
                             </div>

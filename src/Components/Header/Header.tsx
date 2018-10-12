@@ -3,11 +3,12 @@ import i18next from "i18next";
 import { translate } from "react-i18next";
 import { Navbar } from "../Navbar/Navbar";
 import "./header.less";
+import { Button } from '../Button/Button';
 
 @translate("common")
 export class Header extends Component {
 
-    private onChangeLanguage = ({target: {value}}) => i18next.changeLanguage(value);
+    private onChangeLanguage = ({target: {firstChild: {nodeValue}}}) => i18next.changeLanguage(nodeValue.toLowerCase());
 
     public render() {
         const {t} = this.props;
@@ -18,8 +19,8 @@ export class Header extends Component {
                     <Navbar />
                 </div>
                 <div className="header__locale">
-                    <button className="btn" onClick={this.onChangeLanguage} value="pl">{t("header.langPl")}</button>
-                    <button className="btn" onClick={this.onChangeLanguage} value="en">{t("header.langEn")}</button>
+                    <Button type="positive" onClickHandler={this.onChangeLanguage}>{t("header.langPl")}</Button>
+                    <Button type="positive" onClickHandler={this.onChangeLanguage}>{t("header.langEn")}</Button>
                 </div>
             </header>
         );
