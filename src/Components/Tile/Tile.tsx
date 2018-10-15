@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 import "./tile.less";
 
@@ -29,7 +30,7 @@ export class Tile extends Component<ITileProps> {
                 </div>
 
                 <div className="tile__back">
-                    <i className="fas fa-search"></i>
+                    <FontAwesomeIcon icon={["fas", "search"]} />
                 </div>
             </div>
         );

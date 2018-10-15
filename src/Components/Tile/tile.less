@@ -9,14 +9,15 @@
     width: 100%;
     min-height: 100px;
     color: @snowflake;
-    transition-duration: 500ms;
-    transition-delay: 200ms;
 
     &__back {
+        position: absolute;
         opacity: 0;
+        font-size: 60px;
     }
 
     &__front {
+        position: absolute;
         opacity: 1;
     }
 
@@ -33,14 +34,14 @@
         transform: rotateY(180deg);
         transition-delay: 200ms;
         transition-duration: 500ms;
+    }
 
-        &__back {
-            opacity: 1;
-        }
+    &:hover &__back {
+        opacity: 1;
+    }
 
-        &__front {
-            opacity: 0;
-        }
+    &:hover &__front {
+        opacity: 0;
     }
 
     &.orange {
