@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import i18next from "i18next";
 import { translate } from "react-i18next";
 import { Navbar } from "../Navbar/Navbar";
-import "./header.less";
 import { Button } from '../Button/Button';
+import "./header.less";
 
 @translate("common")
 export class Header extends Component {
