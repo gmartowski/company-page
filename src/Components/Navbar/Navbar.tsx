@@ -12,17 +12,17 @@ export class Navbar extends Component {
 
         return (
             <nav className="navbar">
-                <ul>
-                    <li>
+                <ul className="navbar__list">
+                    <li className="navbar__item">
                         <Link to="/">{t("navbar.home")}</Link>
                     </li>
-                    <li>
+                    <li className="navbar__item">
                         <Link to="/portfolio">{t("navbar.portfolio")}</Link>
                     </li>
-                    <li>
+                    <li className="navbar__item">
                         <Link to="/about">{t("navbar.about")}</Link>
                     </li>
-                    <li>
+                    <li className="navbar__item">
                         <Link to="/contact">{t("navbar.contact")}</Link>
                     </li>
                 </ul>

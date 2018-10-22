@@ -1,13 +1,24 @@
 @import (reference) '../../variables';
 
 .navbar {
-    ul {
+
+    &__list {
         display: flex;
         list-style: none;
-        li {
-            a {
-                text-decoration: none;
-                padding: 10px;
+    }
+
+    &__item {
+
+        a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: @snowflake;
+            color: @metal;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: @holland;
+                color: @snowflake;
             }
         }
     }
