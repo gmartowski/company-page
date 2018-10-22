@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
@@ -27,15 +27,15 @@ module.exports = {
                 test: /\.(js|jsx|tsx)$/,
                 exclude: /node_modules/,
                 use: [
-                    { loader: "babel-loader" },
-                    { loader: "tslint-loader" },
+                    { loader: 'babel-loader' },
+                    { loader: 'tslint-loader' },
                 ]
             },
             {
                 test: /\.html$/,
                 use: [
                     {
-                        loader: "html-loader"
+                        loader: 'html-loader'
                     }
                 ]
             },
@@ -44,19 +44,19 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: "style-loader",
+                        loader: 'style-loader',
                         options: {
                             sourceMap: true
                         }
                     },
                     {
-                        loader: "css-loader",
+                        loader: 'css-loader',
                         options: {
                             sourceMap: true
                         }
                     },
                     {
-                        loader: "less-loader",
+                        loader: 'less-loader',
                         options: {
                             cacheDirectory: true,
                             strictMath: true,
@@ -87,7 +87,7 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf)?$/,
                 loader: 'file-loader',
                 options: {
-                    name: "[name].[ext]"
+                    name: '[name].[ext]'
                 }
             }
         ]
@@ -99,8 +99,8 @@ module.exports = {
         new WriteFilePlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebPackPlugin({
-            template: "./src/index.html",
-            filename: "./index.html"
+            template: './src/index.html',
+            filename: './index.html'
         })
     ]
 };
