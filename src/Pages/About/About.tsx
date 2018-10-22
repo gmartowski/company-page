@@ -1,21 +1,11 @@
 import React, { Component } from "react";
 import { translate } from "react-i18next";
 import { Image } from "../../Components/Image/Image";
-import { AppContext, Provider } from "../../App/Provider";
-import { Portal } from '../../Components/Portal/Portal';
-import { Modal } from '../../Components/Modal/Modal';
-import { Button } from '../../Components/Button/Button';
+import { Provider, AppContext } from '../../App/Provider';
+import './about.less';
 
 @translate("common")
 export class About extends Component {
-
-    private state = {
-        isModalOpened: false
-    };
-
-    private toggleModalHandler = () => {
-        this.setState({isModalOpened: !this.state.isModalOpened});
-    };
 
     public render() {
 
@@ -23,7 +13,7 @@ export class About extends Component {
 
         return (
             <Provider>
-                <AppContext.Consumer>
+                <AppContext>
                     {
                         (context) => (
                             <div className="about">
@@ -31,23 +21,13 @@ export class About extends Component {
                                        alt={context.ceo}
                                        title={context.ceo}
                                 />
-                                {t("about.content")}
-                                <Button type="positive" onClickHandler={this.toggleModalHandler}>Otwórz modal</Button>
-                                <Portal>
-                                    <Modal title="Tytuł modala" isModalOpened={this.state.isModalOpened}
-                                           onCloseHandler={this.toggleModalHandler}>
-                                        Strona niepublicznej szkoły wyższej Collegium Civitas
-                                        Projekt graficzny: Fabryka Aplikacji
-                                        CMS: Wordpress
-                                        Preprocesor CSS: Less
-                                        Pierwszy projekt obsługujący kilka wersji językowych
-                                        URL: http://www.civitas.edu.pl/
-                                    </Modal>
-                                </Portal>
+                                <div className="about__content">
+                                    {t("about.content")}
+                                </div>
                             </div>
                         )
                     }
-                </AppContext.Consumer>
+                </AppContext>
             </Provider>
         );
     }

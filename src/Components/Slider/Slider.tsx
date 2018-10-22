@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Slider from 'react-slick';
+import { Image } from '../Image/Image';
 import './slider.less';
 
-class HomeSlider extends Component {
-    render() {
+export class HomeSlider extends Component {
+
+    public render() {
         const settings = {
             dots: true,
             infinite: true,
@@ -15,18 +16,21 @@ class HomeSlider extends Component {
         return (
             <div className="home-slider">
 
-
                 <Slider {...settings}>
                     {
                         Object.keys(this.props.data).map((item) =>
                             <div>
+                                <Image src={this.props.data[item].picture.thumbnail}
+                                       alt="fsdfdsfsdfsd"
+                                       title="dsdasdasd"
+                                />
                                 <h3>
-                                    <span>{this.props.data[item].name.title}</span>
-                                    <span>{this.props.data[item].name.first}</span>
-                                    <span>{this.props.data[item].name.last}</span>
+                                    <span>{this.props.data[item].name.title} </span>
+                                    <span>{this.props.data[item].name.first} </span>
+                                    <span>{this.props.data[item].name.last} </span>
                                     <span>, CTO, Credit Suisse</span>
                                 </h3>
-                                <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                <div>śćżźęąóLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                                     tempor
                                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                                     accusam
@@ -41,12 +45,7 @@ class HomeSlider extends Component {
                             </div>
                         )}
                 </Slider>
-
             </div>
         );
     }
 }
-
-HomeSlider.propTypes = {};
-
-export default HomeSlider;

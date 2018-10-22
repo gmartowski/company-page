@@ -22,7 +22,7 @@ export class Footer extends Component<IFooterProps, {}> {
             <footer className="footer">
 
                 <div className="footer__info">
-                    <div className="footer__name">{name}</div>
+                    <div className="footer__name">{name.first} {name.last}</div>
                     <div className="footer__ceo">{ceo}</div>
                     <div className="footer__street">{street} {flat}</div>
                     <div className="footer__postal-and-city">{postal} {city}</div>

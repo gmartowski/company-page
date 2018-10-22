@@ -10,16 +10,21 @@ export class Provider extends Component<IProviderState> {
 
     private state = {
         company: {
-            ceo: "Grzegorz Martowski",
+            name: {
+                first: "Grzegorz",
+                last: "Martowski"
+            },
+            cName: "StabSoft",
             city: "Wrocław",
-            email: "kontakt@stabsoft.pl",
             flat: "1/16",
-            name: "StabSoft",
+            street: "Kokosowa",
+            email: "kontakt@stabsoft.pl",
             phone: "693-881-676",
             postal: "54-060",
             skype: "grzegorz.martowski",
-            street: "Kokosowa",
             avatar: "http://stabsoft.pl/public/images/ja.jpg",
+            github: "https://github.com/gmartowski",
+            facebook: "https://www.facebook.com/stabsoft/"
         }
     };
 

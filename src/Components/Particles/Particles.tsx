@@ -1,32 +1,17 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
 import "./particles.less";
-
-const particlesProps = {
-    canvasClassName: "particles__canvas",
-    className: "particles",
-    params: {
-        color: "#fff",
-        height: "75vh",
-        particles: {
-            number: {
-                density: {
-                    enable: true,
-                    value_area: 1000
-                },
-                value: 80
-            }
-        },
-        width: "100%"
-    }
-};
+import { particlesProps} from './particlesProps'
 
 export class ParticlesWrapper extends Component {
 
     public render() {
         return (
             <div>
-                <h1 style={{position: "absolute", top: "50%", left: "50%", color: "#fff"}}>Front-end </h1>
+                <h1 style={{position: "absolute", top: "50%", color: "#fff", width: '100%'}}>
+                    <div style={{textAlign: 'center', fontSize: '50px'}}>Grzegorz Martowski</div>
+                    <div style={{textAlign: 'center', fontSize: '60px'}}>#frontenddeveloper</div>
+                </h1>
                 <Particles {...particlesProps} />
             </div>
         );

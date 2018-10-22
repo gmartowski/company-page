@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { About } from "../Pages/About/About";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Contact } from "../Pages/Contact/Contact";
@@ -19,7 +19,7 @@ export class App extends Component {
         return (
             <Provider>
                 <Router>
-                    <div className={"hello"}>
+                    <>
                         <Header />
                         <Route exact path="/" component={Home} />
                         <Route exact path="/portfolio" component={Portfolio} />
@@ -32,7 +32,7 @@ export class App extends Component {
                                 )
                             }
                         </AppContext.Consumer>
-                    </div>
+                    </>
                 </Router>
             </Provider>
         );

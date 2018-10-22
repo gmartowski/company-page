@@ -3,7 +3,7 @@ import { ParticlesWrapper } from "../../Components/Particles/Particles";
 import { Tile } from "../../Components/Tile/Tile";
 import "./home.less";
 import { Users } from '../../Components/Users/Users';
-import HomeSlider from '../../Components/Slider/Slider';
+import { HomeSlider } from '../../Components/Slider/Slider';
 
 
 export class Home extends Component {
