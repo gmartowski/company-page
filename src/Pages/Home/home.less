@@ -7,8 +7,12 @@
     height: auto;
 
     &__tiles-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(300px, auto);
         background-color: @navy;
     }
+
     .slider-wrapper {
         max-width: 700px;
         height: 300px;

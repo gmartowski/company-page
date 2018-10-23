@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './modal.less';
 import { Button } from '../Button/Button';
 import classNames from 'classnames';
+import './modal.less';
 
 interface IModalProps {
     title: string;

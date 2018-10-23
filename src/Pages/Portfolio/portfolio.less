@@ -1,11 +1,23 @@
 @import '../../variables';
 
 .portfolio {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    grid-gap: 100px;
     background-color: #fafafa;
     min-height: 70vh;
     height: auto;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

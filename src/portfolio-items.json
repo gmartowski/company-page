@@ -51,8 +51,8 @@
     "funmedia": {
       "profession": "Junior Web Developer",
       "logoUrl": "http://stabsoft.pl/public/images/brands/funmedia.png",
-      "logoAlt": "",
-      "logoTitle": "",
+      "logoAlt": "Funmedia",
+      "logoTitle": "Funmedia",
       "period": "PAŹDZIERNIK 2013 - MAJ 2014",
       "responsibilities": [
         "Aktualizacja i rozwijanie frontendu kursów e-learningowych,",
@@ -72,18 +72,6 @@
         "Udział w migracji stron do nowego systemu zarządzania treścią,",
         "Praca w zespole wielokulturowym,",
         "Zdobyte umiejętności na stanowisku: Rozwinięcie znajomości biblioteki jQuery oraz systemu CMS, kontakt i współpraca z klientami zagranicznym."
-      ]
-    },
-    "surfland": {
-      "profession": "Service Worker ",
-      "logoUrl": "http://stabsoft.pl/public/images/brands/surfland.png",
-      "logoAlt": "Surfland",
-      "logoTitle": "Surfland",
-      "period": "MARZEC 2010 - KWIECIEŃ 2010",
-      "responsibilities": [
-        "Serwis komputerowy,",
-        "Konfiguracja i rekonfiguracja sprzętu komputerowego,",
-        "Pomoc w pracach wewnętrznych w firmie"
       ]
     }
   }

@@ -4,6 +4,7 @@ import { translate } from "react-i18next";
 import { Navbar } from "../Navbar/Navbar";
 import { Button } from '../Button/Button';
 import "./header.less";
+import { Image } from '../Image/Image';
 
 @translate("common")
 export class Header extends Component {
@@ -14,7 +15,12 @@ export class Header extends Component {
         const {t} = this.props;
         return (
             <header className="header">
-                <div className="header__logo">{t("header.nameAndSurname")}</div>
+                <div className="header__logo">
+                    <Image src="http://stabsoft.pl/public/images/brands/stabsoft.png"
+                           alt="Logo Stabsoft"
+                           title="Logo Stabsoft"
+                    />
+                </div>
                 <div className="header__navbar">
                     <Navbar />
                 </div>

@@ -1,20 +1,15 @@
 @import (reference) '../variables';
 
 html, body {
-    font-family: 'Open Sans', sans-serif;
-
+    font-family: @font;
+    font-size: @font-base-size;
+    color: @metal;
     height: 100%;
     margin: 0;
-    color: @metal;
-    font-size: 16px;
 }
 
 h1 {
-    font-family: 'Julius Sans One', sans-serif;
-}
-
-.home__tiles-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(300px, auto);
+    font-family: @font-decorated;
+    font-size: @font-wast-size;
+    color: @metal;
 }
