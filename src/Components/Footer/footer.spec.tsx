@@ -59,7 +59,7 @@ describe('Footer Component', () => {
 
         // then
         it('should have proper Font Awesome icons set', () => {
-
+            // check every font awesome icon if it has proper class
         });
     });
 });
@@ -68,14 +68,14 @@ describe('Footer Component', () => {
 function render() {
 
     let props = {
-        name: "test name",
-        ceo: "test ceo",
-        street: "test",
-        flat: "test",
-        postal: "test",
-        city: "test",
-        phone: "test",
-        email: "test"
+        name: "Jan Kowalski",
+        ceo: "Stabsoft",
+        street: "Kokosowa",
+        flat: "2/12",
+        postal: "54-067",
+        city: "Wrocław",
+        phone: "888999111",
+        email: "jan.kowalski@stabsoft.pl"
     };
 
     let component = shallow(<Footer {...props} />);
