@@ -10,11 +10,9 @@ export class Career extends Component {
 
         return (
             <div className="career">
-                <div className="career__title">
-                    <Title markup="h1"
-                           title="career"
-                    />
-                </div>
+
+                <Title markup="h1" title="career" />
+
                 <div className="career__wrapper">
                     {
                         Object.keys(careerItems).map((item) => (

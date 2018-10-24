@@ -6,7 +6,7 @@ import { Portal } from '../../../Components/Portal/Portal';
 import { Modal } from '../../../Components/Modal/Modal';
 import "./career-item.less";
 
-interface IPortfolioItemProps {
+interface ICareerItemProps {
     logoUrl: string;
     logoAlt: string;
     logoTitle: string;
@@ -15,7 +15,7 @@ interface IPortfolioItemProps {
     responsibilities: Array<string>;
 }
 
-export class CareerItem extends Component<IPortfolioItemProps> {
+export class CareerItem extends Component<ICareerItemProps> {
 
     private state = {
         isModalOpened: false
@@ -38,20 +38,28 @@ export class CareerItem extends Component<IPortfolioItemProps> {
 
         return (
             <Fragment>
-                <article className="portfolio-item">
-                    <figure className="portfolio-item__logo">
+
+                <article className="career-item">
+                    <figure className="career-item__logo">
                         <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
                         <figcaption>{profession}</figcaption>
                     </figure>
-                    <div className="portfolio-item__period">{period}</div>
+                    <div className="career-item__period">{period}</div>
                     <Button type="negative" onClickHandler={this.toggleModalHandler}>Szczegóły</Button>
                 </article>
+
                 <Portal>
-                    <Modal title={logoAlt}
+                    <Modal title={`${logoAlt} - ${profession}`}
                            isModalOpened={this.state.isModalOpened}
                            onCloseHandler={this.toggleModalHandler}>
-                        <div className="portfolio-item__description">
-                            <ul className="portfolio-item__description-list">
+
+                        <div className="career-item__description">
+
+                            <div className="career-item__description-company-logo">
+                                <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
+                            </div>
+
+                            <ul className="career-item__description-list">
                                 {
                                     (responsibilities).map((item, index) => (
                                         <li key={index}><FontAwesomeIcon icon={["fas", "check"]} /> {item}</li>
@@ -61,6 +69,7 @@ export class CareerItem extends Component<IPortfolioItemProps> {
                         </div>
                     </Modal>
                 </Portal>
+
             </Fragment>
         );
     }
