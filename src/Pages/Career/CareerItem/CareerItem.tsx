@@ -4,7 +4,7 @@ import { Image } from "../../../Components/Image/Image";
 import { Button } from '../../../Components/Button/Button';
 import { Portal } from '../../../Components/Portal/Portal';
 import { Modal } from '../../../Components/Modal/Modal';
-import "./portfolioItem.less";
+import "./career-item.less";
 
 interface IPortfolioItemProps {
     logoUrl: string;
@@ -15,7 +15,7 @@ interface IPortfolioItemProps {
     responsibilities: Array<string>;
 }
 
-export class PortfolioItem extends Component<IPortfolioItemProps> {
+export class CareerItem extends Component<IPortfolioItemProps> {
 
     private state = {
         isModalOpened: false

@@ -5,6 +5,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { Button } from '../Button/Button';
 import "./header.less";
 import { Image } from '../Image/Image';
+import { Link } from 'react-router-dom';
 
 @translate("common")
 export class Header extends Component {
@@ -16,10 +17,12 @@ export class Header extends Component {
         return (
             <header className="header">
                 <div className="header__logo">
-                    <Image src="http://stabsoft.pl/public/images/brands/stabsoft.png"
-                           alt="Logo Stabsoft"
-                           title="Logo Stabsoft"
-                    />
+                    <Link to="/">
+                        <Image src="http://stabsoft.pl/public/images/brands/stabsoft.png"
+                               alt="Logo Stabsoft"
+                               title="Logo Stabsoft"
+                        />
+                    </Link>
                 </div>
                 <div className="header__navbar">
                     <Navbar />

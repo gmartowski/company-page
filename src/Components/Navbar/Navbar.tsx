@@ -17,7 +17,7 @@ export class Navbar extends Component {
                         <Link to="/">{t("navbar.home")}</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/portfolio">{t("navbar.portfolio")}</Link>
+                        <Link to="/career">{t("navbar.career")}</Link>
                     </li>
                     <li className="navbar__item">
                         <Link to="/about">{t("navbar.about")}</Link>
