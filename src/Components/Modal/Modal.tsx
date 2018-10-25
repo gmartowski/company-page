@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { translate } from "react-i18next";
 import { Button } from '../Button/Button';
 import classNames from 'classnames';
-import './modal.less';
 import { Title } from '../Title/Title';
+import './modal.less';
 
 interface IModalProps {
     title: string;
     children: string;
     isModalOpened: boolean;
     onCloseHandler: void;
+    t: void;
 }
 
 @translate('common')

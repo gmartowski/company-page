@@ -42,9 +42,8 @@ export class CareerItem extends Component<ICareerItemProps> {
                 <article className="career-item">
                     <figure className="career-item__logo">
                         <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
-                        <figcaption>{profession}</figcaption>
+                        <figcaption className="career-item__caption">{profession}</figcaption>
                     </figure>
-                    <div className="career-item__period">{period}</div>
                     <Button type="negative" onClickHandler={this.toggleModalHandler}>Szczegóły</Button>
                 </article>
 

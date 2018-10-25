@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactEventHandler } from 'react';
 import classNames from 'classnames';
 import './button.less';
 
@@ -10,7 +10,7 @@ interface IButtonProps {
 
 export class Button extends Component<IButtonProps> {
 
-    private onClickHandler = event => this.props.onClickHandler(event);
+    private onClickHandler = (event: ReactEventHandler) => this.props.onClickHandler(event);
 
     public render() {
         const {children, type} = this.props;
