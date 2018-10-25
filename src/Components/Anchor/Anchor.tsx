@@ -1,23 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './anchor.less';
 
 enum target {
-    blank = "_blank",
-    self = "_self",
-    parent = "_parent",
-    top = "_top",
-};
+    _blank,
+    _self,
+    _parent,
+    _top
+}
 
 interface IAnchorProps {
     href: string,
     target: target
-    content: string
+    children: any
 }
 
-export class Anchor extends Component<IAnchorProps> {
-    render() {
-        const {href, target, content} = this.props;
-        return (
-            <a href={href} target={target} className="anchor">{content}</a>
-        );
-    }
-}
+export const Anchor = ({href, target, children}: IAnchorProps) => {
+    return <a href={href} target={target} className="anchor">{children}</a>;
+};

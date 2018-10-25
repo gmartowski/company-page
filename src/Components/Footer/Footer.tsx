@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./footer.less";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Anchor } from '../Anchor/Anchor';
 
 interface IFooterProps {
     name: string;
@@ -37,9 +38,9 @@ export class Footer extends Component<IFooterProps, {}> {
                     </div>
 
                     <div className="footer__social" style={{fontSize: '40px'}}>
-                        <a href="https://www.facebook.com/stabsoft/">
+                        <Anchor href="https://www.facebook.com/stabsoft/" target="_self">
                             <FontAwesomeIcon icon={["fab", "facebook"]} />
-                        </a>
+                        </Anchor>
                         <a href="https://www.linkedin.com/in/grzegorz-martowski-b961187a/">
                             <FontAwesomeIcon icon={["fab", "linkedin"]} />
                         </a>
