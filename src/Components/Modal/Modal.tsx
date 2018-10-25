@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { translate } from "react-i18next";
 import { Button } from '../Button/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import './modal.less';
+import { Title } from '../Title/Title';
 
 interface IModalProps {
     title: string;
@@ -11,23 +12,22 @@ interface IModalProps {
     onCloseHandler: void;
 }
 
+@translate('common')
 export class Modal extends Component<IModalProps> {
 
     private onCloseHandler = () => this.props.onCloseHandler();
 
     public render() {
-        const {isModalOpened, title, children} = this.props;
+        const {isModalOpened, title, children, t} = this.props;
         return (
             <div className={classNames({'modal': true, 'closed': !isModalOpened})}>
                 <div className="modal__body">
                     <div className="modal__header">
-                        <h1>{title}</h1>
-                        <FontAwesomeIcon icon={['fas', 'times']} />
+                        <Title title={title} markup={'h1'} />
                     </div>
                     <div className="modal__content">{children}</div>
                     <div className="modal__footer">
-                        <Button type="neutral" onClickHandler={this.onCloseHandler}>Anuluj</Button>
-                        <Button type="positive" onClickHandler={this.onCloseHandler}>OK</Button>
+                        <Button type="positive" onClickHandler={this.onCloseHandler}>{t("modal.close")}</Button>
                     </div>
                 </div>
             </div>

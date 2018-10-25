@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import "./button.less";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import './button.less';
 
 interface IButtonProps {
     children: string;
@@ -10,7 +10,7 @@ interface IButtonProps {
 
 export class Button extends Component<IButtonProps> {
 
-    private onClickHandler = (event) => this.props.onClickHandler(event);
+    private onClickHandler = event => this.props.onClickHandler(event);
 
     public render() {
         const {children, type} = this.props;
@@ -18,10 +18,10 @@ export class Button extends Component<IButtonProps> {
             <button
                 className={
                     classNames({
-                        "button": true,
-                        "button--positive": type === "positive",
-                        "button--negative": type === "negative",
-                        "button--neutral": type === "neutral"
+                        'button': true,
+                        'button--positive': type === 'positive',
+                        'button--negative': type === 'negative',
+                        'button--neutral': type === 'neutral'
                     })}
                 onClick={this.onClickHandler}>
                 {children}

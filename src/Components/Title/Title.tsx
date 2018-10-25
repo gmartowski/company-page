@@ -1,8 +1,13 @@
 import React, { Component, Fragment } from 'react';
 
-export class Title extends Component {
+interface IPropsTitle {
+    markup: string,
+    title: string
+}
 
-    getTitleTag = markup => {
+export class Title extends Component<IPropsTitle> {
+
+    private getTitleTag = (markup: string) => {
 
         const {title} = this.props;
 
@@ -12,16 +17,14 @@ export class Title extends Component {
             return <h2>{title}</h2>;
         } else if (markup == 'h3') {
             return <h3>{title}</h3>;
+        } else {
+            return <span>{title}</span>;
         }
     };
 
-    render() {
-        const {markup} = this.props;
-        let a = this.getTitleTag(markup);
+    public render() {
         return (
-            <>
-                {a}
-            </>
+            <Fragment>{this.getTitleTag(this.props.markup)}</Fragment>
         );
     }
 }

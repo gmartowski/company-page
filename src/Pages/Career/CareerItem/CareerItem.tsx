@@ -69,7 +69,6 @@ export class CareerItem extends Component<ICareerItemProps> {
                         </div>
                     </Modal>
                 </Portal>
-
             </Fragment>
         );
     }
