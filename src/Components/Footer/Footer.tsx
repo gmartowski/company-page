@@ -37,9 +37,12 @@ export class Footer extends Component<IFooterProps, {}> {
                     </div>
 
                     <div className="footer__social" style={{fontSize: '40px'}}>
-                        <FontAwesomeIcon icon={["fab", "twitter"]} />
-                        <FontAwesomeIcon icon={["fab", "facebook"]} />
-                        <FontAwesomeIcon icon={["fab", "linkedin"]} />
+                        <a href="https://www.facebook.com/stabsoft/">
+                            <FontAwesomeIcon icon={["fab", "facebook"]} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/grzegorz-martowski-b961187a/">
+                            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+                        </a>
                     </div>
                 </div>
             </footer>
