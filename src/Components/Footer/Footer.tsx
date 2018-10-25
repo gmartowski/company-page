@@ -41,9 +41,9 @@ export class Footer extends Component<IFooterProps, {}> {
                         <Anchor href="https://www.facebook.com/stabsoft/" target="_self">
                             <FontAwesomeIcon icon={["fab", "facebook"]} />
                         </Anchor>
-                        <a href="https://www.linkedin.com/in/grzegorz-martowski-b961187a/">
+                        <Anchor href="https://www.linkedin.com/in/grzegorz-martowski-b961187a/" target="_self">
                             <FontAwesomeIcon icon={["fab", "linkedin"]} />
-                        </a>
+                        </Anchor>
                     </div>
                 </div>
             </footer>
