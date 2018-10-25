@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '../Button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import './modal.less';
 
@@ -19,7 +20,10 @@ export class Modal extends Component<IModalProps> {
         return (
             <div className={classNames({'modal': true, 'closed': !isModalOpened})}>
                 <div className="modal__body">
-                    <div className="modal__header"><h1>{title}</h1></div>
+                    <div className="modal__header">
+                        <h1>{title}</h1>
+                        <FontAwesomeIcon icon={['fas', 'times']} />
+                    </div>
                     <div className="modal__content">{children}</div>
                     <div className="modal__footer">
                         <Button type="neutral" onClickHandler={this.onCloseHandler}>Anuluj</Button>

@@ -2,8 +2,8 @@ import React, { Component, Fragment } from "react";
 import { About } from "../Pages/About/About";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Contact } from "../Pages/Contact/Contact";
-import { faCheck, faSearch, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { faTwitter, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faTimes, faCheck, faSearch, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Footer } from "../Components/Footer/Footer";
 import { Header } from "../Components/Header/Header";
 import { Home } from "../Pages/Home/Home";
@@ -12,7 +12,7 @@ import { AppContext, Provider } from "./Provider";
 import { Career } from "../Pages/Career/Career";
 import "./app.less";
 
-library.add(faCheck, faSearch, faChevronDown, faTwitter, faFacebook, faLinkedin);
+library.add(faCheck, faSearch, faChevronDown, faTimes, faFacebook, faLinkedin);
 
 export class App extends Component {
 
