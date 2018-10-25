@@ -1,13 +1,17 @@
 
 # Company page
 
-Simple ReactJS webpage
+Simple ReactJS + Typescript webpage.
+Testing tools: Jest + Enzyme, Cypress
 
 ## Built With
 
-* [Webpack](https://webpack.js.org/)
 * [ReactJS](https://reactjs.org/)
-* [Skeleton](http://getskeleton.com/)
+* [Typescript](https://typescriptlang.org/)
+* [Webpack](https://webpack.js.org/)
+* [Jest](https://jestjs.io/)
+* [Enzyme](https://airbnb.io/enzyme/)
+* [Cypress](https://www.cypress.io/)
 
 ## Authors
 
