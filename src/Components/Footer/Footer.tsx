@@ -13,7 +13,6 @@ interface IFooterProps {
     phone: string;
     email: string;
 }
-
 export class Footer extends Component<IFooterProps, {}> {
 
     public render() {
@@ -34,7 +33,11 @@ export class Footer extends Component<IFooterProps, {}> {
 
                     <div className="footer__contact">
                         <div className="footer__phone">{phone}</div>
-                        <div className="footer__email"><a href={`mailto:${email}`}>{email}</a></div>
+                        <div className="footer__email">
+                            <Anchor href={`mailto:${email}`} target={'_blank'}>
+                                {email}
+                            </Anchor>
+                        </div>
                     </div>
 
                     <div className="footer__social" style={{fontSize: '40px'}}>
