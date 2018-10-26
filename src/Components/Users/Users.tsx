@@ -21,6 +21,6 @@ export class Users extends Component {
 
         return (
             <Render data={data} />
-       );
+        );
     }
 }
