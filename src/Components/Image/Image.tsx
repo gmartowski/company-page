@@ -1,18 +1,14 @@
-import React, { Component } from "react";
+import React from 'react';
 
-interface ImageProps {
+interface IImageProps {
     src: string;
     alt: string;
     title: string;
 }
 
-export class Image extends Component<ImageProps> {
-
-    public render() {
-
-        const {src, alt, title} = this.props;
-        return (
-            <img src={src} alt={alt} title={title} className="image" />
-        );
-    }
-}
+export const Image: React.SFC<IImageProps> = props => {
+    const {src, alt, title} = props;
+    return (
+        <img src={src} alt={alt} title={title} className='image' />
+    );
+};

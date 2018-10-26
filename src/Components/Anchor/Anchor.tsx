@@ -14,6 +14,7 @@ interface IAnchorProps {
     children: any
 }
 
-export const Anchor = ({href, target, children}: IAnchorProps) => {
+export const Anchor: React.SFC<IAnchorProps> = props => {
+    const {href, target, children} = props;
     return <a href={href} target={target} className="anchor">{children}</a>;
 };
