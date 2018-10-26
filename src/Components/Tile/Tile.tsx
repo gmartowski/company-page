@@ -22,7 +22,7 @@ export class Tile extends Component<ITileProps> {
         });
 
         return (
-            <div className={`tile ${tileClasses}`}>
+            <div className={`tile flip-card ${tileClasses}`}>
 
                 <div className="tile__front">
                     <div className="tile__title">{companyName}</div>
