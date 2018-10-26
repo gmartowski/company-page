@@ -49,4 +49,15 @@
         align-items: center;
         justify-items: center;
     }
+
+    .cite {
+        quotes: "\201C""\201D""\2018""\2019";
+        border-left: 10px solid #ccc;
+        background-color: #f9f9f9s;
+
+        &:before {
+            content: open-quote;
+            font-size: 80px;
+        }
+    }
 }
