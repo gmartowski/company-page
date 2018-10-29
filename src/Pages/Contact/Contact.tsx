@@ -2,6 +2,9 @@ import { AppContext, Provider } from "../../App/Provider";
 import React, { Component } from "react";
 import { translate } from "react-i18next";
 import "./contact.less";
+import { Image } from '../../Components/Image/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Anchor } from '../../Components/Anchor/Anchor';
 
 interface IContactState {
     email: string;
@@ -23,17 +26,44 @@ export class Contact extends Component<IContactProps, IContactState> {
                 <AppContext.Consumer>
                     {
                         (context) => (
-                            <div className="contact">
+                            <div className="contact" id="contact">
                                 <div className="contact__details">
-                                    <div className="contact__company-name">{context.cName}</div>
-                                    <div className="contact__name-and-surname">{context.name.first}</div>
-                                    <div className="contact__name-and-surname">{context.name.last}</div>
-                                    <div className="contact__skype">{context.skype}</div>
+                                    <div className="contact__logo">
+                                        <Image src={context.logo} alt="Stabsoft" title="Stabsoft" />
+                                    </div>
+                                    <div className="contact__name-and-surname">
+                                        <span>{context.name.first}</span>&nbsp;
+                                        <span>{context.name.last}</span>
+                                    </div>
+                                    <div className="contact__nip">
+                                        <span>NIP:&nbsp;</span>
+                                        <span>894-285-98-21</span>
+                                    </div>
+                                    <div className="contact__nip">
+                                        <span>REGON:&nbsp;</span>
+                                        <span>022432082</span>
+                                    </div>
                                 </div>
                                 <div className="contact__portfolio-links">
-                                    <div className="contact__email">{context.email}</div>
-                                    <div className="contact__github">{context.github}</div>
-                                    <div className="contact__facebook">{context.facebook}</div>
+                                    <Anchor href={context.facebook} target={"_blank"}>
+                                        <FontAwesomeIcon icon={['fab', 'facebook']} />
+                                    </Anchor>
+
+                                    <Anchor href={context.facebook} target={"_blank"}>
+                                        <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                                    </Anchor>
+
+                                    <Anchor href={context.email} target={"_blank"}>
+                                        <FontAwesomeIcon icon={['fa', 'envelope']} />
+                                    </Anchor>
+
+                                    <Anchor href={context.skype} target={"_blank"}>
+                                        <FontAwesomeIcon icon={['fab', 'skype']} />
+                                    </Anchor>
+
+                                    <Anchor href={context.github} target={"_blank"}>
+                                        <FontAwesomeIcon icon={['fab', 'github']} />
+                                    </Anchor>
                                 </div>
                             </div>
                         )

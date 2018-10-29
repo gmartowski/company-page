@@ -16,7 +16,7 @@ interface IFooterProps {
 
 export const Footer: React.SFC<IFooterProps> = props => {
 
-    const {name, ceo, street, flat, postal, city, phone, email} = props;
+    const {name, email} = props;
 
     return (
         <footer className='footer'>
@@ -25,13 +25,6 @@ export const Footer: React.SFC<IFooterProps> = props => {
 
                 <div className='footer__info'>
                     <div className='footer__name'>{name.first} {name.last}</div>
-                    <div className='footer__ceo'>{ceo}</div>
-                    <div className='footer__street'>{street} {flat}</div>
-                    <div className='footer__postal-and-city'>{postal} {city}</div>
-                </div>
-
-                <div className='footer__contact'>
-                    <div className='footer__phone'>{phone}</div>
                     <div className='footer__email'>
                         <Anchor href={`mailto:${email}`} target={'_blank'}>
                             {email}
@@ -45,6 +38,12 @@ export const Footer: React.SFC<IFooterProps> = props => {
                     </Anchor>
                     <Anchor href='https://www.linkedin.com/in/grzegorz-martowski-b961187a/' target='_self'>
                         <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                    </Anchor>
+                    <Anchor href='https://www.linkedin.com/in/grzegorz-martowski-b961187a/' target='_self'>
+                        <FontAwesomeIcon icon={['fab', 'skype']} />
+                    </Anchor>
+                    <Anchor href='https://www.linkedin.com/in/grzegorz-martowski-b961187a/' target='_self'>
+                        <FontAwesomeIcon icon={['fab', 'github']} />
                     </Anchor>
                 </div>
             </div>

@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Particles from "react-particles-js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./particles.less";
 import { particlesProps } from './particlesProps';
+import { Header } from '../Header/Header';
 
 export class ParticlesWrapper extends Component {
 
     public render() {
         return (
-            <div>
+            <Fragment>
+                <Header />
                 <h1 style={{position: "absolute", top: "50%", color: "#fff", width: '100%'}}>
                     <div style={{textAlign: 'center', fontSize: '50px'}}>Front-end Developer</div>
                     <div style={{textAlign: 'center', fontSize: '14px'}}>
@@ -20,7 +22,7 @@ export class ParticlesWrapper extends Component {
                     </div>
                 </h1>
                 <Particles {...particlesProps} />
-            </div>
+            </Fragment>
         );
     }
 }

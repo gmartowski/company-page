@@ -3,7 +3,7 @@ export const particlesProps = {
     className: "particles",
     params: {
         color: "#fff",
-        height: "75vh",
+        height: "100vh",
         particles: {
             number: {
                 density: {

@@ -5,6 +5,9 @@ import { Image } from "../../Components/Image/Image";
 import { Provider, AppContext } from '../../App/Provider';
 import './about.less';
 import { Title } from '../../Components/Title/Title';
+import { Users } from '../../Components/Users/Users';
+import { HomeSlider } from '../../Components/Slider/Slider';
+import { Tile } from '../../Components/Tile/Tile';
 
 interface IAboutProps {
     t: void
@@ -66,6 +69,30 @@ export class About extends Component<IAboutProps> {
                                             }
                                         </div>
                                     </div>
+                                </div>
+                                <Users render={HomeSlider} />
+
+                                <div className="home__tiles-wrapper">
+                                    <Tile backgroundColor="orange"
+                                          companyName="FunMedia"
+                                          fontColor="white"
+                                          technologicalStack="JS, LESS, jQuery"
+                                    />
+                                    <Tile backgroundColor="blue"
+                                          companyName="Credit Suisse"
+                                          fontColor="white"
+                                          technologicalStack="JS, LESS, jQuery"
+                                    />
+                                    <Tile backgroundColor="green"
+                                          companyName="Avra"
+                                          fontColor="white"
+                                          technologicalStack="JS, LESS, jQuery"
+                                    />
+                                    <Tile backgroundColor="orange"
+                                          companyName="The Green Line"
+                                          fontColor="white"
+                                          technologicalStack="JS, LESS, jQuery"
+                                    />
                                 </div>
                             </div>
                         )
