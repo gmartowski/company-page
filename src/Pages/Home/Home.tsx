@@ -1,13 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { ParticlesWrapper } from "../../Components/Particles/Particles";
-import "./home.less";
 
-export class Home extends Component {
-
-    public render() {
-
-        return (
-            <ParticlesWrapper />
-        );
-    }
-}
+export const Home = () => <ParticlesWrapper />;
