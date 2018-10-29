@@ -14,28 +14,31 @@ export class Header extends Component {
     private onChangeLanguage = ({target: {firstChild: {nodeValue}}}) => i18next.changeLanguage(nodeValue.toLowerCase());
 
     public render() {
-        const {t} = this.props;
+        const {t, theme} = this.props;
         return (
             <Provider>
                 <AppContext.Consumer>
                     {
                         (context) => (
-                            <header className="header">
-                                <div className="header__logo">
-                                    <Link to="/">
-                                        <Image src={context.logo}
-                                               alt="Logo Stabsoft"
-                                               title="Logo Stabsoft"
-                                        />
-                                    </Link>
-                                </div>
+                            <header className={`header ${theme === 'home' ? 'header--home' : ''}`}>
+                                {
+                                    theme !== 'home' &&
+                                    <div className="header__logo">
+                                        <Link to="/">
+                                            <Image src={context.logo}
+                                                   alt="Logo Stabsoft"
+                                                   title="Logo Stabsoft"
+                                            />
+                                        </Link>
+                                    </div>
+                                }
                                 <div className="header__navbar">
-                                    <Navbar />
+                                    <Navbar theme={`${theme === 'home' ? 'home' : ''}`} />
                                 </div>
                                 <div className="header__locale">
-                                    <Button type="positive"
+                                    <Button type={`${theme === 'home' ? 'empty' : 'negative'}`}
                                             onClickHandler={this.onChangeLanguage}>{t("header.langPl")}</Button>
-                                    <Button type="positive"
+                                    <Button type={`${theme === 'home' ? 'empty' : 'negative'}`}
                                             onClickHandler={this.onChangeLanguage}>{t("header.langEn")}</Button>
                                 </div>
                             </header>

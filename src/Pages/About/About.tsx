@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import { toolsFromPast, toolsCurrent, toolsWishList } from '../../experience-items.json';
+import { toolsCurrent } from '../../experience-items.json';
 import { translate } from "react-i18next";
 import { Image } from "../../Components/Image/Image";
 import { Provider, AppContext } from '../../App/Provider';
 import './about.less';
-import { Title } from '../../Components/Title/Title';
 import { Users } from '../../Components/Users/Users';
 import { HomeSlider } from '../../Components/Slider/Slider';
-import { Tile } from '../../Components/Tile/Tile';
 
 interface IAboutProps {
     t: void
@@ -26,10 +24,21 @@ export class About extends Component<IAboutProps> {
                     {
                         (context) => (
                             <div className="about">
-                                <Image src={context.avatar}
-                                       alt={context.ceo}
-                                       title={context.ceo}
-                                />
+
+                                <div className="about__bio">
+                                    <Image src={context.avatar}
+                                           alt={context.ceo}
+                                           title={context.ceo}
+                                    />
+                                    <div className="about__tools-current">
+                                        {
+                                            Object.keys(toolsCurrent).map((tool) => (
+                                                <Image src={toolsCurrent[tool]} alt={tool} title={tool} />
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+
                                 <div className="about__content">
 
                                     <div className="about__text">
@@ -40,59 +49,8 @@ export class About extends Component<IAboutProps> {
 
                                     <div className="about__tools">
 
-                                        <div className="about__tools-used">
-                                            <Title markup={'h2'} title={t('about.pastToolsTitle')} />
-                                            {
-                                                Object.keys(toolsFromPast).map((tool) => (
-                                                    <Image src={toolsFromPast[tool]}
-                                                           title={tool}
-                                                           alt={tool} />
-                                                ))
-                                            }
-                                        </div>
-
-                                        <div className="about__tools-current">
-                                            <Title markup={'h2'} title={t('about.presentToolsTitle')} />
-                                            {
-                                                Object.keys(toolsCurrent).map((tool) => (
-                                                    <Image src={toolsCurrent[tool]} alt={tool} title={tool} />
-                                                ))
-                                            }
-                                        </div>
-
-                                        <div className="about__tools-learned">
-                                            <Title markup={'h2'} title={t('about.futureToolsTitle')} />
-                                            {
-                                                Object.keys(toolsWishList).map((tool) => (
-                                                    <Image src={toolsWishList[tool]} alt={tool} title={tool} />
-                                                ))
-                                            }
-                                        </div>
+                                        <Users render={HomeSlider} />
                                     </div>
-                                </div>
-                                <Users render={HomeSlider} />
-
-                                <div className="home__tiles-wrapper">
-                                    <Tile backgroundColor="orange"
-                                          companyName="FunMedia"
-                                          fontColor="white"
-                                          technologicalStack="JS, LESS, jQuery"
-                                    />
-                                    <Tile backgroundColor="blue"
-                                          companyName="Credit Suisse"
-                                          fontColor="white"
-                                          technologicalStack="JS, LESS, jQuery"
-                                    />
-                                    <Tile backgroundColor="green"
-                                          companyName="Avra"
-                                          fontColor="white"
-                                          technologicalStack="JS, LESS, jQuery"
-                                    />
-                                    <Tile backgroundColor="orange"
-                                          companyName="The Green Line"
-                                          fontColor="white"
-                                          technologicalStack="JS, LESS, jQuery"
-                                    />
                                 </div>
                             </div>
                         )

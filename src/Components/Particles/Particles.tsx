@@ -1,28 +1,34 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment, Component } from "react";
 import Particles from "react-particles-js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./particles.less";
 import { particlesProps } from './particlesProps';
-import { Header } from '../Header/Header';
+import { Provider, AppContext } from '../../App/Provider';
+import { Image } from '../Image/Image';
+import "./particles.less";
 
 export class ParticlesWrapper extends Component {
-
-    public render() {
+    render() {
         return (
-            <Fragment>
-                <Header />
-                <h1 style={{position: "absolute", top: "50%", color: "#fff", width: '100%'}}>
-                    <div style={{textAlign: 'center', fontSize: '50px'}}>Front-end Developer</div>
-                    <div style={{textAlign: 'center', fontSize: '14px'}}>
-                        #frontenddeveloper, #reactjsenthusiast, #webdev
-                    </div>
-                    <div style={{textAlign: 'center', fontSize: '30px', marginTop: '100px'}}>Zobacz moje portfolio</div>
-                    <div style={{textAlign: 'center', fontSize: '60px'}}>
-                        <FontAwesomeIcon icon={["fas", "chevron-down"]} />
-                    </div>
-                </h1>
-                <Particles {...particlesProps} />
-            </Fragment>
+            <Provider>
+                <AppContext.Consumer>
+                    {
+                        ({logo}) => (
+                            <Fragment>
+                                <h1 style={{position: "absolute", top: "50%", color: "#fff", width: '100%'}}>
+                                    <div style={{textAlign: 'center'}}>
+                                        <Image src={logo} alt="Stabsoft" title="Stabsoft" />
+                                    </div>
+                                    <div style={{textAlign: 'center', fontSize: '50px'}}>Grzegorz Martowski</div>
+                                    <div style={{textAlign: 'center', fontSize: '35px'}}>Front-end Developer</div>
+                                    <div style={{textAlign: 'center', fontSize: '14px'}}>
+                                        #stabsoft, #reactjsenthusiast, #frontenddeveloper
+                                    </div>
+                                </h1>
+                                <Particles {...particlesProps} />
+                            </Fragment>
+                        )
+                    }
+                </AppContext.Consumer>
+            </Provider>
         );
     }
 }

@@ -8,10 +8,10 @@ export class Navbar extends Component {
 
     public render() {
 
-        const {t} = this.props;
+        const {t, theme} = this.props;
 
         return (
-            <nav className="navbar">
+            <nav className={`navbar ${theme === 'home' ? 'navbar--home': ''}`}>
                 <ul className="navbar__list">
                     <li className="navbar__item">
                         <Link to="/">{t("navbar.home")}</Link>

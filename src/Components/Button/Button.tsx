@@ -21,7 +21,8 @@ export class Button extends Component<IButtonProps> {
                         'button': true,
                         'button--positive': type === 'positive',
                         'button--negative': type === 'negative',
-                        'button--neutral': type === 'neutral'
+                        'button--neutral': type === 'neutral',
+                        'button--empty': type === 'empty'
                     })}
                 onClick={this.onClickHandler}>
                 {children}

@@ -6,29 +6,54 @@
     height: 38px;
     padding: 0 30px;
     color: @snowflake;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
     border-radius: 4px;
-    border: none;
     cursor: pointer;
     box-sizing: border-box;
+    font-family: @font;
+    background-color: transparent;
 
     &--positive {
-        background-color: @navy;
-        border-color: @navy;
+        border: 1px solid @navy;
+        color: @navy;
+
+        &:hover {
+            color: @snowflake;
+            background-color: @navy;
+        }
     }
 
     &--negative {
-        background-color: @holland;
-        border-color: @holland;
+        border: 1px solid @holland;
+        color: @holland;
+
+        &:hover {
+            color: @snowflake;
+            background-color: @holland;
+        }
     }
 
     &--neutral {
-        background-color: @metal;
-        border-color: @metal;
+        border: 1px solid @metal;
+        color: @metal;
+
+        &:hover {
+            color: @snowflake;
+            background-color: @metal;
+        }
+    }
+
+    &--empty {
+        border: 1px solid @snowflake;
+
+        &:hover {
+            color: @navy;
+            background-color: @snowflake;
+        }
     }
 }
