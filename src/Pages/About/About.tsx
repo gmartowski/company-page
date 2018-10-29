@@ -6,6 +6,7 @@ import { Provider, AppContext } from '../../App/Provider';
 import './about.less';
 import { Users } from '../../Components/Users/Users';
 import { HomeSlider } from '../../Components/Slider/Slider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface IAboutProps {
     t: void
@@ -30,6 +31,7 @@ export class About extends Component<IAboutProps> {
                                            alt={context.ceo}
                                            title={context.ceo}
                                     />
+                                    <FontAwesomeIcon icon={["fas", "file-pdf"]} />
                                     <div className="about__tools-current">
                                         {
                                             Object.keys(toolsCurrent).map((tool) => (

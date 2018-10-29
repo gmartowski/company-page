@@ -4,9 +4,9 @@ import i18next from "i18next";
 import { translate } from "react-i18next";
 import { Navbar } from "../Navbar/Navbar";
 import { Button } from '../Button/Button';
-import "./header.less";
 import { Image } from '../Image/Image';
 import { Link } from 'react-router-dom';
+import "./header.less";
 
 @translate("common")
 export class Header extends Component {

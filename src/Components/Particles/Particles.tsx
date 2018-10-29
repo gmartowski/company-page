@@ -13,7 +13,7 @@ export class ParticlesWrapper extends Component {
                     {
                         ({logo}) => (
                             <Fragment>
-                                <h1 style={{position: "absolute", top: "50%", color: "#fff", width: '100%'}}>
+                                <h1 style={{position: "absolute", top: "33%", color: "#fff", width: '100%'}}>
                                     <div style={{textAlign: 'center'}}>
                                         <Image src={logo} alt="Stabsoft" title="Stabsoft" />
                                     </div>

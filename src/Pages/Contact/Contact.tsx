@@ -39,7 +39,7 @@ export class Contact extends Component<IContactProps, IContactState> {
                                         <span>NIP:&nbsp;</span>
                                         <span>894-285-98-21</span>
                                     </div>
-                                    <div className="contact__nip">
+                                    <div className="contact__regon">
                                         <span>REGON:&nbsp;</span>
                                         <span>022432082</span>
                                     </div>
@@ -49,16 +49,12 @@ export class Contact extends Component<IContactProps, IContactState> {
                                         <FontAwesomeIcon icon={['fab', 'facebook']} />
                                     </Anchor>
 
-                                    <Anchor href={context.facebook} target={"_blank"}>
+                                    <Anchor href={context.linkedin} target={"_blank"}>
                                         <FontAwesomeIcon icon={['fab', 'linkedin']} />
                                     </Anchor>
 
-                                    <Anchor href={context.email} target={"_blank"}>
+                                    <Anchor href={`mailto:${context.email}`} target={"_blank"}>
                                         <FontAwesomeIcon icon={['fa', 'envelope']} />
-                                    </Anchor>
-
-                                    <Anchor href={context.skype} target={"_blank"}>
-                                        <FontAwesomeIcon icon={['fab', 'skype']} />
                                     </Anchor>
 
                                     <Anchor href={context.github} target={"_blank"}>

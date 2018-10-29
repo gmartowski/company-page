@@ -2,15 +2,15 @@ import React, { Component, Fragment } from "react";
 import { About } from "../Pages/About/About";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Contact } from "../Pages/Contact/Contact";
-import { faTimes, faCheck, faSearch, faChevronDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faLinkedin, faGithub, faSkype } from '@fortawesome/free-brands-svg-icons';
+import { faTimes, faCheck, faSearch, faChevronDown, faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Home } from "../Pages/Home/Home";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { Career } from "../Pages/Career/Career";
 import "./app.less";
 import { Layout } from '../Components/Layout/Layout';
 
-library.add(faCheck, faEnvelope, faSearch, faChevronDown, faTimes, faFacebook, faLinkedin, faGithub, faSkype);
+library.add(faCheck, faEnvelope, faSearch, faChevronDown, faTimes, faFacebook, faLinkedin, faGithub, faFilePdf);
 
 export class App extends Component {
 
