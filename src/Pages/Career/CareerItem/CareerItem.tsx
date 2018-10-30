@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image } from "../../../Components/Image/Image";
-import { Button } from '../../../Components/Button/Button';
-import { Portal } from '../../../Components/Portal/Portal';
-import { Modal } from '../../../Components/Modal/Modal';
+import { Button } from "../../../Components/Button/Button";
+import { Portal } from "../../../Components/Portal/Portal";
+import { Modal } from "../../../Components/Modal/Modal";
 import "./career-item.less";
 
 interface ICareerItemProps {
@@ -22,7 +22,7 @@ export class CareerItem extends Component<ICareerItemProps> {
     };
 
     private toggleModalHandler = () => {
-        this.setState({isModalOpened: !this.state.isModalOpened});
+        this.setState({ isModalOpened: !this.state.isModalOpened });
     };
 
     public render() {
@@ -32,42 +32,45 @@ export class CareerItem extends Component<ICareerItemProps> {
             logoAlt,
             logoTitle,
             profession,
-            responsibilities,
+            responsibilities
         } = this.props;
 
         return (
-            <Fragment>
+                <Fragment>
 
-                <article className="career-item">
-                    <figure className="career-item__logo">
-                        <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
-                        <figcaption className="career-item__caption">{profession}</figcaption>
-                    </figure>
-                    <Button type="negative" onClickHandler={this.toggleModalHandler}>Szczegóły</Button>
-                </article>
+                    <article className="career-item">
+                        <figure className="career-item__logo">
+                            <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
+                        </figure>
+                        <div className="career-item__profession">{profession}</div>
+                        <Button type="negative" onClickHandler={this.toggleModalHandler}>Szczegóły</Button>
+                    </article>
 
-                <Portal>
-                    <Modal title={`${logoAlt} - ${profession}`}
-                           isModalOpened={this.state.isModalOpened}
-                           onCloseHandler={this.toggleModalHandler}>
+                    <Portal>
+                        <Modal title={`${logoAlt} - ${profession}`}
+                               isModalOpened={this.state.isModalOpened}
+                               onCloseHandler={this.toggleModalHandler}>
 
-                        <div className="career-item__description">
+                            <div className="career-item__description">
 
-                            <div className="career-item__description-company-logo">
-                                <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
+                                <div className="career-item__description-company-logo">
+                                    <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
+                                </div>
+
+                                <ul className="career-item__description-list">
+                                    {
+                                        (responsibilities).map((item, index) => (
+                                                <li className="career-item__description-list-item" key={index}>
+                                                    <FontAwesomeIcon icon={["fas", "check"]} />
+                                                    <span>{item}</span>
+                                                </li>
+                                        ))
+                                    }
+                                </ul>
                             </div>
-
-                            <ul className="career-item__description-list">
-                                {
-                                    (responsibilities).map((item, index) => (
-                                        <li key={index}><FontAwesomeIcon icon={["fas", "check"]} /> {item}</li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-                    </Modal>
-                </Portal>
-            </Fragment>
+                        </Modal>
+                    </Portal>
+                </Fragment>
         );
     }
 }

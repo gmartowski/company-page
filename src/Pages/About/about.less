@@ -1,17 +1,5 @@
 @import (reference) '../../variables';
 @import "../../variables";
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-
-.slider-wrapper {
-    max-width: 700px;
-    height: 300px;
-    margin: auto;
-}
-
-.slick-prev:before, .slick-next:before {
-    color: @holland;
-}
 
 .about {
     display: grid;
@@ -24,6 +12,13 @@
     max-width: 1200px;
     width: 100%;
     margin: auto;
+
+    img {
+        transition-property: all;
+        transition-duration: 500ms;
+        transition-delay: 200ms;
+        transform: translateX(-20px) translateY(-20px);
+    }
 
     &__bio {
         display: grid;
@@ -50,12 +45,16 @@
         justify-items: center;
     }
 
-    .cite {
-        quotes: "\201C""\201C";
-
-        &:before {
-            content: open-quote;
-            font-size: 60px;
+    &__curriculum-vitae {
+        a {
+            color: @acrobat;
+            font-size: 50px;
         }
+
     }
+
+    .cite {
+        line-height: 1.75;
+    }
+
 }

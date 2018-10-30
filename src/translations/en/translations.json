@@ -6,7 +6,7 @@
   },
   "navbar": {
     "home": "Home",
-    "career": "Career",
+    "career": "Experience",
     "about": "About",
     "contact": "Contact"
   },
@@ -15,9 +15,12 @@
     "intro": "Designer"
   },
   "about": {
-    "content": "Firmę StabSoft założyłem w Czerwcu 2014 roku - po zdobyciu doświadczenia w kilku firmach jako Web Developer, postanowiłem poszerzyć moją działalność o projekty tworzone pod własnym nazwiskiem. Pracuję na terenie Wrocławia, mojego rodzinnego miasta i jego okolic, ale można ze mną współpracować również zdalnie. Wykonuję zlecenia prywatne, współpracuję obecnie również z firmą z branży energii odnawialnej, dla której prowadzę usługi webdeveloperskie oraz wrocławską firmą programistyczną tworzącą oprogramowanie dla średnich i dużych przedsebiorstw.Jestem absolwentem Politechniki Wrocławskiej, kierunków Teleinformatyka i Zarządzanie.Programowanie to natomiast moja pasja, parę lat temu złapałem bakcyla i tak mi zostało.Ciągle rozwijam się w zakresie Front-End i Back-End Developmentu, jestem na bieżąco z najnowszymi trendami.Prywatnie interesuje się fotografią cyfrową, a także lubię pograć w siatkówkę."
+    "experience": "I became interested in programming in 2011, still in college. I started as a web publisher in a large corporation, later in several smaller companies as a Web Developer. I worked on both business applications based on the Zend, Symfony and Laravel frameworks, and I did static pages based on CMS Wordpress in cooperation with graphics. From 4 years on B2B, and from 3 as Front-end Developer. After the initial adventures with jQuery and AngularJS, I focused on working with the ReactJS framework.",
+    "codingIsFun": "Programming is not only a job for me, but also great fun! After starting the adventure with React, I think that geography can be really nice.",
+    "interestedIn": "In my free time I devote myself to a different passion - photography, I also like football very much, which I have been playing regularly for over 20 years :) If you listen to ambient or synth-wave / pop, you like Star Trek, and Blade Runner's climate is epic for you It's even though I'm an introvert that you can have a different impression."
   },
   "modal": {
     "close": "Close"
   }
 }
+

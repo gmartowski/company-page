@@ -8,7 +8,7 @@ export class Users extends Component {
     };
 
     async componentDidMount() {
-        let data = await axios.get('https://randomuser.me/api/?format=json&results=10')
+        let data = await axios.get('https://randomuser.me/api/?format=json&nat=us,dk,fr,gb&results=10')
             .then(({data: {results}}) => {
                 return results;
             });
