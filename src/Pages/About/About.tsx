@@ -15,10 +15,6 @@ interface IAboutProps {
 @translate("common")
 export class About extends Component<IAboutProps> {
 
-    componentDidMount() {
-        console.log('dupa');
-    }
-
     public render() {
 
         const {t} = this.props;
