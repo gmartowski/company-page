@@ -32,7 +32,6 @@ export class CareerItem extends Component<ICareerItemProps> {
             logoAlt,
             logoTitle,
             profession,
-            period,
             responsibilities,
         } = this.props;
 
