@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { translate } from "react-i18next";
 import { Image } from "../../../Components/Image/Image";
 import { Button } from "../../../Components/Button/Button";
 import { Portal } from "../../../Components/Portal/Portal";
@@ -15,6 +16,7 @@ interface ICareerItemProps {
     responsibilities: Array<string>;
 }
 
+@translate("common")
 export class CareerItem extends Component<ICareerItemProps> {
 
     private state = {
@@ -32,7 +34,9 @@ export class CareerItem extends Component<ICareerItemProps> {
             logoAlt,
             logoTitle,
             profession,
-            responsibilities
+            period,
+            responsibilities,
+            t
         } = this.props;
 
         return (
@@ -43,7 +47,10 @@ export class CareerItem extends Component<ICareerItemProps> {
                             <Image src={logoUrl} alt={logoAlt} title={logoTitle} />
                         </figure>
                         <div className="career-item__profession">{profession}</div>
-                        <Button type="negative" onClickHandler={this.toggleModalHandler}>Szczegóły</Button>
+                        <div className="career-item__profession">{t(`${period}`)}</div>
+                        <Button type="negative" onClickHandler={this.toggleModalHandler}>
+                            {t("career.details")}
+                        </Button>
                     </article>
 
                     <Portal>
@@ -62,7 +69,7 @@ export class CareerItem extends Component<ICareerItemProps> {
                                         (responsibilities).map((item, index) => (
                                                 <li className="career-item__description-list-item" key={index}>
                                                     <FontAwesomeIcon icon={["fas", "check"]} />
-                                                    <span>{item}</span>
+                                                    <span>{t(`${item}`)}</span>
                                                 </li>
                                         ))
                                     }

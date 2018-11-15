@@ -20,7 +20,7 @@ export class ParticlesWrapper extends Component {
                                     <div style={{textAlign: 'center', fontSize: '50px'}}>Grzegorz Martowski</div>
                                     <div style={{textAlign: 'center', fontSize: '35px'}}>Front-end Developer</div>
                                     <div style={{textAlign: 'center', fontSize: '14px'}}>
-                                        #stabsoft, #reactjsenthusiast, #frontenddeveloper
+                                        #reactjsenthusiast, #frontenddeveloper
                                     </div>
                                 </h1>
                                 <Particles {...particlesProps} />

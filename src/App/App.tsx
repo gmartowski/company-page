@@ -7,8 +7,8 @@ import { faFacebook, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-i
 import { Home } from "../Pages/Home/Home";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { Career } from "../Pages/Career/Career";
-import "./app.less";
 import { Layout } from '../Components/Layout/Layout';
+import "./app.less";
 
 library.add(faCheck, faEnvelope, faSearch, faChevronDown, faTimes, faFacebook, faLinkedin, faGithub, faFilePdf);
 

@@ -3,11 +3,9 @@ import { toolsCurrent } from "../../experience-items.json";
 import { translate } from "react-i18next";
 import { Image } from "../../Components/Image/Image";
 import { Provider, AppContext } from "../../App/Provider";
-import "./about.less";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 import { Anchor } from "../../Components/Anchor/Anchor";
-import { Title } from "../../Components/Title/Title";
+import "./about.less";
 
 interface IAboutProps {
     t: void;
@@ -15,11 +13,6 @@ interface IAboutProps {
 
 @translate("common")
 export class About extends Component<IAboutProps> {
-
-    componentDidMount() {
-        let a = "test string";
-        console.log(a[1]);
-    }
 
     public render() {
         const { t } = this.props;
@@ -57,7 +50,7 @@ export class About extends Component<IAboutProps> {
                                             </div>
 
                                             <div className="about__curriculum-vitae">
-                                                <Anchor href="http://stabsoft.pl" target="_blank">
+                                                <Anchor href={`http://stabsoft.pl/docs/${t("about.cvFile")}`} target="_blank">
                                                     <FontAwesomeIcon icon={["fas", "file-pdf"]} />
                                                 </Anchor>
                                             </div>

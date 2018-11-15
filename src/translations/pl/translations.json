@@ -20,10 +20,56 @@
     "experience2": "Od 4 lat na B2B, a od 3 jako Front-end Developer.",
     "experience3": "Po początkowych przygodach z jQuery i AngularJS, ukierunkowałem się na pracę z frameworkiem ReactJS - albo inaczej; jestem na etapie fascynacji tym narzędziem",
     "codingIsFun": "Programowanie to dla mnie nie tylko praca, ale też i świetna zabawa ! Po zaczęciu przygody z Reactem uważem, że kodzenie może być naprawdę przyjemne.",
-    "interestedIn": "W wolnym czasie oddaje się innej pasji - fotografii, bardzo lubię też piłkę nożną, w którą regularnie gram już od ponad 20 lat :) Jeśli słuchacz ambientu albo synth-wave/pop, lubisz Star-Treka, a klimat Blade Runnera jest dla Ciebie epicki to pomimo że jestem introwertykiem możesz odnieść inne wrażenie."
+    "interestedIn": "W wolnym czasie oddaje się innej pasji - fotografii, bardzo lubię też piłkę nożną, w którą regularnie gram już od ponad 20 lat :)",
+    "cvFile": "Grzegorz_Martowski_CV_PL.pdf"
   },
   "modal": {
     "close": "Zamknij"
+  },
+  "career": {
+    "details": "Szczegóły",
+    "period": {
+      "avra": "STYCZEŃ 2016 - TERAZ",
+      "makrologic": "PAŹDZIERNIK 2014 - STYCZEŃ 2016",
+      "stabsoft": "CZERWIEC 2014 - TERAZ",
+      "greenline": "MAJ 2014 - GRUDZIEŃ 2014",
+      "funmedia": "PAŹDZIERNIK 2013 - MAJ 2014",
+      "creditsuisse": "LIPIEC 2012 - KWIECIEŃ 2013"
+    },
+    "responsibilities": {
+      "avra": {
+        "first": "Utrzymanie i implementacja Front-Endu projektów,",
+        "second": "Implementacja CSS / LESS w produktach opartych o język Java i technologię JSP,",
+        "third": "Praca przy projektach wykorzystujących technologie i narzędzia takie jak: GIT, LESS, Webpack, ES6, ReactJS, Jest + Enzyme"
+      },
+      "makrologic": {
+        "first": "Utrzymanie i implementacja Front-Endu projektów,",
+        "second": "Implementacja CSS / LESS w produktach opartych o język Java i technologię JSP,",
+        "third": "Praca przy projektach wykorzystujących technologie i narzędzia takie jak: GIT, LESS, Gulp czy AngularJS."
+      },
+      "stabsoft": {
+        "first": "Projektowanie stron WWW opartych o CMS Wordpress,",
+        "second": "Cięcie PSD, współpraca z grafikiem,",
+        "third": "Wykorzystanie najnowszych technologii webowych (Laravel, Bootstrap/Foundation, SASS/LESS, jQuery/AngularJS)."
+      },
+      "greenline": {
+        "first": "Aktualizacja i rozwijanie Front-Endu stron firmy",
+        "second": "Programowanie zmian w logice biznesowej platformy opartej o framework Zend,",
+        "third": "Projektowanie nowych witryn firmy przy współpracy z grafikiem."
+      },
+      "funmedia": {
+        "first": "Aktualizacja i rozwijanie frontendu kursów e-learningowych,",
+        "second": "Programowanie zmian w logice biznesowej platformy opartej o framework Zend,",
+        "third": "Realizacja prac związanych z data miningiem na bazach danych MySQL,"
+      },
+      "creditsuisse": {
+        "first": "Wykonywanie zadań z zakresu publishingu; aktualizacja i rozwijanie stron firmy,",
+        "second": "Programowanie formularzy internetowych, rejestrujących klientów banku,",
+        "third": "Udział w migracji stron do nowego systemu zarządzania treścią,",
+        "fourth": "Praca w zespole wielokulturowym,",
+        "fifth": "Zdobyte umiejętności na stanowisku: Rozwinięcie znajomości biblioteki jQuery oraz systemu CMS, kontakt i współpraca z klientami zagranicznym."
+      }
+    }
   }
 }
 
